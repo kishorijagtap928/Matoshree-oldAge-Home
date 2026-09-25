@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="warmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F2EA" />
+      <stop offset="100%" stop-color="#ECE2D0" />
+    </linearGradient>
+    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#40916C" />
+      <stop offset="100%" stop-color="#1B4332" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#warmBg)" />
+
+  <!-- Courtyard Arch & Tulsi Vrindavan Motif (Traditional peaceful Indian home courtyard) -->
+  <circle cx="400" cy="220" r="140" fill="#E2D4C3" opacity="0.5" />
+  
+  <!-- Calming Banyan / Neem Tree Silhouette symbolizing shade & shelter (आपुलकीची सावली) -->
+  <path d="M400,380 L400,240 Q400,180 340,140 Q400,80 460,140 Q400,180 400,240 Z" fill="#6C4F3D" />
+  <circle cx="340" cy="150" r="85" fill="url(#treeGrad)" opacity="0.9" />
+  <circle cx="460" cy="150" r="85" fill="url(#treeGrad)" opacity="0.9" />
+  <circle cx="400" cy="100" r="95" fill="url(#treeGrad)" opacity="0.95" />
+  <circle cx="370" cy="120" r="50" fill="#52B788" opacity="0.7" />
+  <circle cx="430" cy="120" r="50" fill="#52B788" opacity="0.7" />
+
+  <!-- Porch Veranda / Ota (Sitting area for elders to chat peacefully) -->
+  <rect x="180" y="420" width="440" height="90" fill="#FFFFFF" rx="8" stroke="#D2C4B0" stroke-width="2" />
+  <rect x="220" y="410" width="360" height="15" fill="#C59B27" rx="3" />
+  
+  <!-- Peaceful Lantern / Diya symbolizing warmth and positivity -->
+  <path d="M385,465 Q400,435 415,465 Q400,475 385,465 Z" fill="#E5A93C" />
+  <circle cx="400" cy="455" r="16" fill="#FDE68A" opacity="0.4" />
+  <ellipse cx="400" cy="475" rx="28" ry="8" fill="#B45309" />
+
+  <!-- Text inscription in Devanagari -->
+  <text x="400" y="555" font-family="'Noto Sans Devanagari', sans-serif" font-size="22" font-weight="700" fill="#1B4332" text-anchor="middle">
+    “आपुलकीच्या सावलीत, सन्मानाने जगण्याची हक्काची जागा”
+  </text>
+</svg>

@@ -1,0 +1,216 @@
+{
+  "users": [
+    {
+      "id": "usr_super_admin_1",
+      "username": "admin",
+      "email": "admin@thoralya-jijau.org",
+      "name": "संस्था सुपर अ‍ॅडमिन (Super Admin)",
+      "role": "SUPER_ADMIN",
+      "passwordHash": "4c2d27b1ff0fd695b3781f17438de2b32e318a87c40838e0fdfc88d29f4dfbf0f5c79e002cdf3f5c4b54f4cefce4ed37e80f2882bc3d26b6a5667ed515080c15",
+      "passwordSalt": "cce0614b5d1c5bd55397b72af1947f7e",
+      "active": true,
+      "createdAt": "2026-09-22T14:01:57.847Z"
+    },
+    {
+      "id": "usr_manager_1",
+      "username": "manager",
+      "email": "manager@thoralya-jijau.org",
+      "name": "कार्यक्रम व्यवस्थापक (Manager)",
+      "role": "MANAGER",
+      "passwordHash": "3477176cdc73feff2985d3323c337f917637240716294cfd6f3a6274290e657dc3f2f3e4945983f19dd284897065866569e7365e1858ce09651410e2a021d25b",
+      "passwordSalt": "8221901fec8e4e614bac0d882a621f2a",
+      "active": true,
+      "createdAt": "2026-09-22T14:01:57.847Z"
+    }
+  ],
+  "events": [],
+  "boardMembers": [
+    {
+      "id": 1,
+      "name": "कांतीलाल चोपडा",
+      "designationKey": "अध्यक्ष",
+      "cityKey": "नाशिक",
+      "photoUrl": null
+    },
+    {
+      "id": 2,
+      "name": "अनिल खिंवसरा",
+      "designationKey": "सचिव",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 3,
+      "name": "सुनील बंब",
+      "designationKey": "कोषाध्यक्ष",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 4,
+      "name": "सुभाषचन्द्र रुणवाल",
+      "designationKey": "विश्वस्त",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 5,
+      "name": "रमेश फिरोदिया",
+      "designationKey": "विश्वस्त",
+      "cityKey": "अ.नगर",
+      "photoUrl": null
+    },
+    {
+      "id": 6,
+      "name": "रमणलाल लुंकड",
+      "designationKey": "विश्वस्त",
+      "cityKey": "पुणे",
+      "photoUrl": null
+    },
+    {
+      "id": 7,
+      "name": "सुमतीलाल कर्णावट",
+      "designationKey": "विश्वस्त",
+      "cityKey": "ठाणे",
+      "photoUrl": null
+    },
+    {
+      "id": 8,
+      "name": "जयंतभाई शहा",
+      "designationKey": "विश्वस्त",
+      "cityKey": "पुणे",
+      "photoUrl": null
+    },
+    {
+      "id": 9,
+      "name": "पारस मोदी",
+      "designationKey": "विश्वस्त",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 10,
+      "name": "प्रकाश दुगाड",
+      "designationKey": "विश्वस्त",
+      "cityKey": "पुणे",
+      "photoUrl": null
+    },
+    {
+      "id": 11,
+      "name": "अमरचंद छाजेड",
+      "designationKey": "विश्वस्त",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 12,
+      "name": "निलेश छाजेड",
+      "designationKey": "विश्वस्त",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 13,
+      "name": "जितेश छाजेड",
+      "designationKey": "विश्वस्त",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    },
+    {
+      "id": 14,
+      "name": "मोतीलाल छाजेड",
+      "designationKey": "विश्वस्त",
+      "cityKey": "मुंबई",
+      "photoUrl": null
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal_1",
+      "category": "वृद्धाश्रम",
+      "titleMr": "मुख्य इमारत — थोरल्या माँसाहेब जिजाऊ सेवा संस्था",
+      "titleEn": "Main Building — Thoralya Mansaheb Jijau Seva Sanstha",
+      "imageUrl": "/images/ashram-building.jpg",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    },
+    {
+      "id": "gal_2",
+      "category": "परिसर",
+      "titleMr": "शांत, प्रसन्न व निसर्गरम्य आश्रम परिसर आणि मंदिर",
+      "titleEn": "Peaceful & Green Ashram Campus Environment & Temple",
+      "imageUrl": "/images/IMG_20260905_134325477_HDR_PORTRAIT.jpg",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    },
+    {
+      "id": "gal_3",
+      "category": "भोजन",
+      "titleMr": "सात्त्विक व शुद्ध शाकाहारी भोजन व्यवस्था",
+      "titleEn": "Sattvic & Hygienic Pure Vegetarian Dining Facility",
+      "imageUrl": "/images/gallery-dining.jpg",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    },
+    {
+      "id": "gal_4",
+      "category": "सुविधा",
+      "titleMr": "स्वच्छ व हवेशीर निवासी निवारा — लुंकड निवास इमारत",
+      "titleEn": "Clean & Well-Ventilated Resident Shelter — Lunkad Residence",
+      "imageUrl": "/images/IMG_20260905_133931861_HDR_PCT.jpg",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    },
+    {
+      "id": "gal_5",
+      "category": "उपक्रम",
+      "titleMr": "बालगृह व मुलांसाठी सुरू केलेला उपक्रम",
+      "titleEn": "Balgruha & Children Educational Development",
+      "imageUrl": "/images/gallery-balgruha.jpg",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    },
+    {
+      "id": "gal_6",
+      "category": "क्षणचित्रे",
+      "titleMr": "गोशाळा व देशी गोवंशाचे संगोपन",
+      "titleEn": "Goshala & Sacred Cow Care Activities",
+      "imageUrl": "/images/about-home.jpg",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "897a559d3ad0d3db50f7224621d5c2238341914456d9ff2fbd36c5bd54b00680",
+      "userId": "usr_super_admin_1",
+      "role": "SUPER_ADMIN",
+      "expiresAt": 1790691488750
+    },
+    {
+      "token": "50569d17f3bb621fec98694a429f2e303c5eb6e410c334b0b640674abb2e9634",
+      "userId": "usr_super_admin_1",
+      "role": "SUPER_ADMIN",
+      "expiresAt": 1790691491476
+    },
+    {
+      "token": "cdca898b53890c3ae39ec3ce0d1877e01ebbd7b2a9224e3e95910d17d639c54a",
+      "userId": "usr_super_admin_1",
+      "role": "SUPER_ADMIN",
+      "expiresAt": 1790961546036
+    },
+    {
+      "token": "80102568c45a06a4492a5a3d42f80d68d36a63c2512ef157eec78b0ac4018e9b",
+      "userId": "usr_super_admin_1",
+      "role": "SUPER_ADMIN",
+      "expiresAt": 1790961550948
+    }
+  ],
+  "donations": [
+    {
+      "id": "don_1790356743230_jlcys",
+      "name": "राजेश पाटील",
+      "phone": "9822334455",
+      "email": "rajesh.patil@example.com",
+      "donationCategory": "किराणा",
+      "donationItem": "५० किलो गहू आणि २५ किलो तांदूळ",
+      "message": "आम्ही रविवारी सकाळी १० वाजता आश्रमात येऊन देऊ इच्छितो.",
+      "submissionDate": "2026-09-25T17:19:03.230Z",
+      "status": "CONTACTED"
+    }
+  ]
+}

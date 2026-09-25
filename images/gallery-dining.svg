@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDining" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF5EE"/>
+      <stop offset="100%" stop-color="#EDE2D3"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgDining)"/>
+  <!-- Dining Table & Pure Vegetarian Setup -->
+  <rect x="120" y="240" width="360" height="40" fill="#795548" rx="4"/>
+  <rect x="150" y="280" width="18" height="110" fill="#5D4037"/>
+  <rect x="432" y="280" width="18" height="110" fill="#5D4037"/>
+  <!-- Traditional Thali & Bowls -->
+  <circle cx="230" cy="230" r="42" fill="#CFD8DC" stroke="#90A4AE" stroke-width="3"/>
+  <circle cx="215" cy="220" r="10" fill="#FFB74D"/>
+  <circle cx="245" cy="220" r="10" fill="#81C784"/>
+  <circle cx="230" cy="245" r="10" fill="#FFF176"/>
+  <!-- Second Thali -->
+  <circle cx="370" cy="230" r="42" fill="#CFD8DC" stroke="#90A4AE" stroke-width="3"/>
+  <circle cx="355" cy="220" r="10" fill="#FFB74D"/>
+  <circle cx="385" cy="220" r="10" fill="#81C784"/>
+  <circle cx="370" cy="245" r="10" fill="#FFF176"/>
+  <!-- Clean Warm Lamp -->
+  <path d="M295,80 L305,80 L320,130 L280,130 Z" fill="#C59B27"/>
+  <circle cx="300" cy="140" r="12" fill="#FFE082"/>
+  <!-- Label -->
+  <rect x="40" y="30" width="280" height="40" fill="#1B4332" rx="20"/>
+  <text x="180" y="56" font-family="'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">सात्त्विक व शाकाहारी भोजन व्यवस्था</text>
+</svg>

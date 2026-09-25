@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4EFE6" />
+      <stop offset="100%" stop-color="#E2D7C5" />
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A89F91" />
+      <stop offset="100%" stop-color="#7D7465" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4A3F35" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="360" rx="16" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Framing Ring -->
+  <circle cx="150" cy="140" r="85" fill="none" stroke="#D3C7B2" stroke-width="2" stroke-dasharray="4 4" />
+
+  <!-- Avatar Silhouette -->
+  <g filter="url(#softShadow)">
+    <!-- Head -->
+    <circle cx="150" cy="120" r="44" fill="url(#avatarGrad)" />
+    <!-- Shoulders / Bust -->
+    <path d="M 80 230 C 80 185, 110 175, 150 175 C 190 175, 220 185, 220 230 C 220 250, 215 260, 215 260 L 85 260 C 85 260, 80 250, 80 230 Z" fill="url(#avatarGrad)" />
+  </g>
+
+  <!-- Dignified Badge Label -->
+  <rect x="70" y="290" width="160" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.85" stroke="#C5B8A5" stroke-width="1" />
+  <text x="150" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6B5E4F" text-anchor="middle" letter-spacing="0.5">संचालक छायाचित्र</text>
+</svg>

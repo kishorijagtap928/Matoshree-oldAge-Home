@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A44"/>
+      <stop offset="100%" stop-color="#1B3A2C"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgGrad1)"/>
+  <!-- Trees & Garden -->
+  <circle cx="150" cy="240" r="100" fill="#40916C" opacity="0.8"/>
+  <circle cx="450" cy="220" r="110" fill="#52B788" opacity="0.8"/>
+  <circle cx="300" cy="200" r="80" fill="#74C69D" opacity="0.6"/>
+  <!-- Pathway -->
+  <path d="M220,450 L380,450 L320,280 L280,280 Z" fill="#EADBCE"/>
+  <!-- Garden Benches for Elders -->
+  <rect x="180" y="340" width="70" height="15" fill="#8D6E63" rx="2"/>
+  <rect x="190" y="355" width="8" height="20" fill="#5D4037"/>
+  <rect x="232" y="355" width="8" height="20" fill="#5D4037"/>
+  <!-- Label -->
+  <rect x="40" y="30" width="220" height="40" fill="rgba(255,255,255,0.15)" rx="20"/>
+  <text x="150" y="56" font-family="'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">वृद्धाश्रम परिसर व बाग</text>
+</svg>

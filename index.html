@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="mr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>थोरल्या माँसाहेब जिजाऊ सेवा संस्था — सामनगाव, नाशिक</title>
+
+    <!-- SEO & Metadata -->
+    <meta
+      name="description"
+      content="थोरल्या माँसाहेब जिजाऊ सेवा संस्था (रजि. एफ-3983 नाशिक, स्थापना: 18-1-1996) — वृद्धाश्रम, बालगृह व गोशाळा सेवा, सामनगाव, नाशिक. व्यवस्थापक: श्री. राजेंद्र चोपडा."
+    />
+    <meta
+      name="keywords"
+      content="थोरल्या माँसाहेब जिजाऊ सेवा संस्था, वृद्धाश्रम, बालगृह, गोशाळा, सामनगाव नाशिक, राजेंद्र चोपडा, Thoralya Mansaheb Jijau Seva Sanstha, Old Age Home Nashik"
+    />
+    <meta name="author" content="थोरल्या माँसाहेब जिजाऊ सेवा संस्था" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="थोरल्या माँसाहेब जिजाऊ सेवा संस्था — सामनगाव, नाशिक" />
+    <meta
+      property="og:description"
+      content="ज्येष्ठ नागरिकांसाठी आपुलकीचे, सुरक्षित आणि सन्मानाचे वातावरण. वृद्धाश्रम, बालगृह व गोशाळा सेवा, सामनगाव, नाशिक."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo.jpg" />
+
+    <!-- Google Fonts: Noto Sans Devanagari & Inter Fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#mainContent" class="visually-hidden-focusable p-3 bg-dark text-white position-absolute" style="z-index: 1200;">
+      मुख्य सामग्रीकडे जा (Skip to Main Content)
+    </a>
+
+    <!-- ==========================================================================
+         TOP ACCESSIBILITY & CONTACT BAR
+         ========================================================================== -->
+    <header class="top-utility-bar" aria-label="संस्था माहिती व सुलभता पट्टी">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <div class="d-flex align-items-center gap-3 text-light opacity-90 small flex-wrap">
+          <span>
+            <i class="bi bi-award-fill text-warning me-1"></i>
+            <strong data-i18n="topbarReg">रजि. एफ-3983 नाशिक | स्थापना: १८-१-१९९६</strong>
+          </span>
+          <span class="d-none d-md-inline">|</span>
+          <span>
+            <i class="bi bi-geo-alt-fill text-warning me-1"></i>
+            <span data-i18n="topbarLocation">सामनगाव, एकलहरे, नाशिक</span>
+          </span>
+          <span class="d-none d-lg-inline">|</span>
+          <span class="d-none d-lg-inline">
+            <i class="bi bi-person-heart text-warning me-1"></i>
+            <span data-i18n="topbarManager">संस्था चालक: श्री. राजेंद्र चोपडा</span>
+          </span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 ms-auto">
+          <!-- Font Size Adjuster for Elders -->
+          <div class="font-size-controls d-flex align-items-center gap-1" aria-label="अक्षर आकार नियंत्रण">
+            <span class="small me-1 text-light opacity-75 d-none d-sm-inline" data-i18n="topbarFontLabel">अक्षर आकार:</span>
+            <button id="font-size-normal" class="active" title="सामान्य अक्षर आकार" aria-label="सामान्य अक्षर आकार" data-font-size="normal">A</button>
+            <button id="font-size-large" title="मोठा अक्षर आकार" aria-label="मोठा अक्षर आकार" data-font-size="large">A+</button>
+            <button id="font-size-larger" title="अतिशय मोठा अक्षर आकार" aria-label="अतिशय मोठा अक्षर आकार" data-font-size="larger">A++</button>
+          </div>
+
+          <!-- Compact Language Switcher Segmented Pills -->
+          <div class="lang-tab-group" role="tablist" aria-label="भाषा निवडा">
+            <button type="button" class="lang-tab-btn active" data-lang="mr" role="tab" aria-selected="true">मराठी</button>
+            <button type="button" class="lang-tab-btn" data-lang="en" role="tab" aria-selected="false">English</button>
+            <button type="button" class="lang-tab-btn" data-lang="hi" role="tab" aria-selected="false">हिंदी</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         STICKY RESPONSIVE NAVBAR
+         ========================================================================== -->
+    <nav class="navbar navbar-expand-xl navbar-matoshri sticky-top" aria-label="मुख्य नेव्हिगेशन">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between justify-content-xl-center flex-xl-column">
+        <!-- Logo & Official Organization Name -->
+        <a class="navbar-brand navbar-brand-block justify-content-center text-center mx-xl-auto mb-xl-2" href="#home" id="navBrandLogo">
+          <img
+            src="/images/logo.jpg"
+            alt="थोरल्या माँसाहेब जिजाऊ सेवा संस्था बोधचिन्ह"
+            width="46"
+            height="46"
+            class="rounded-circle shadow-sm flex-shrink-0"
+            style="border: 2px solid var(--color-gold); object-fit: cover;"
+          />
+          <div class="d-flex flex-column text-start text-xl-center">
+            <span class="brand-text-main" data-i18n="brandMain">थोरल्या माँसाहेब जिजाऊ सेवा संस्था</span>
+            <span class="brand-text-sub" data-i18n="brandSub">वृद्धाश्रम सेवा • सामनगाव, नाशिक</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button
+          class="navbar-toggler border-0 shadow-none px-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMatoshriNav"
+          aria-controls="navbarMatoshriNav"
+          aria-expanded="false"
+          aria-label="मेनू उघडा / बंद करा"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu Links -->
+        <div class="collapse navbar-collapse justify-content-center text-center w-100" id="navbarMatoshriNav">
+          <ul class="navbar-nav mx-auto align-items-center justify-content-center mb-2 mb-xl-0 gap-1 flex-wrap text-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" data-i18n="navHome">मुखपृष्ठ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-i18n="navAbout">आमच्याबद्दल</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#wings" data-i18n="navWings">सेवेची तीन दालने</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work" data-i18n="navWork">आमचे कार्य</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#facilities" data-i18n="navFacilities">सुविधा</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#routine" data-i18n="navRoutine">दिनचर्या</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#programs" data-i18n="navPrograms">कार्यक्रम</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#community" data-i18n="navCommunity">समाजाचा सहभाग</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#donation" data-i18n="navDonation">मदतीचा हात</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery" data-i18n="navGallery">छायाचित्रे</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#future" data-i18n="navFuture">भविष्यातील नियोजन</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sanstha" data-i18n="navSanstha">संस्था व संचालक मंडळ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-i18n="navContact">संपर्क</a>
+            </li>
+            <li class="nav-item ms-xl-2 mt-2 mt-xl-0 d-flex align-items-center justify-content-center gap-2">
+              <a href="tel:+918530333119" class="btn-nav-call" id="navCallButton">
+                <i class="bi bi-telephone-fill"></i> <span data-i18n="navCall">कॉल करा</span>
+              </a>
+              <a href="/admin" class="btn btn-sm btn-outline-light d-none d-xl-inline-flex align-items-center gap-1 px-2 py-1" style="font-size: 0.85rem; border-color: rgba(255,255,255,0.4);" target="_blank" title="अ‍ॅडमिन पोर्टल">
+                <i class="bi bi-shield-lock-fill text-warning"></i> <span data-i18n="navAdmin">अ‍ॅडमिन लॉगिन</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <main id="mainContent">
+      <!-- ==========================================================================
+           1. HERO SECTION — मुख्य परिचय
+           ========================================================================== -->
+      <section id="home" class="hero-section" aria-label="मुख्य परिचय">
+        <!-- Hero Real Photo Backdrop -->
+        <div class="hero-background-wrapper">
+          <img
+            id="heroBuildingPhoto"
+            class="hero-bg-img"
+            src="/images/ashram-building.jpg"
+            alt="थोरल्या माँसाहेब जिजाऊ सेवा संस्था मुख्य इमारत छायाचित्र"
+            loading="eager"
+            referrerpolicy="no-referrer"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+          <div class="row align-items-center g-4">
+            <!-- Left Hero Content Card -->
+            <div class="col-lg-7 hero-text-col">
+              <div class="hero-text-card">
+                <div class="hero-badge mb-2">
+                  <i class="bi bi-award text-warning"></i>
+                  <span data-i18n="heroRegBadge">रजि. क्र. एफ-३९८३ नाशिक | स्थापना: १८-१-१९९६</span>
+                </div>
+                <div class="hero-badge mb-3">
+                  <i class="bi bi-heart-fill text-danger"></i>
+                  <span data-i18n="heroBadge">आपलेपणा • माया • प्रेम • जिव्हाळा • आदर • माणुसकी • विश्वास</span>
+                </div>
+
+                <h1 class="hero-title" data-i18n="heroTitle">
+                  थोरल्या माँसाहेब जिजाऊ सेवा संस्था
+                </h1>
+
+                <p class="hero-tagline" data-i18n="heroTagline">
+                  “आपुलकीच्या सावलीत, सन्मानाने जगण्याची एक सुंदर जागा.”
+                </p>
+
+                <p class="hero-lead" data-i18n="heroLead">
+                  प्रेमळ सहवास, सुरक्षित वातावरण आणि सन्मानाने जगण्यासाठी आपल्या ज्येष्ठांसाठी एक हक्काचे व आपलेपणाचे ठिकाण. येथे वृद्धाश्रम सेवेसह बालगृह व गोशाळेची पवित्र सेवा अखंड सुरू आहे.
+                </p>
+
+                <div class="hero-cta-group">
+                  <a href="#contact" class="btn-hero-primary" id="btnHeroContact">
+                    <i class="bi bi-telephone-fill"></i> <span data-i18n="heroCtaContact">आमच्याशी संपर्क साधा</span>
+                  </a>
+                  <a
+                    href="https://wa.me/918530333119"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-hero-whatsapp"
+                    id="btnHeroWhatsapp"
+                  >
+                    <i class="bi bi-whatsapp"></i> <span data-i18n="heroCtaWhatsapp">WhatsApp वर संपर्क करा</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Hero Card -->
+            <div class="col-lg-5">
+              <div class="hero-side-card p-4 rounded-4 shadow-lg text-white" style="background: rgba(14, 34, 24, 0.88); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <img src="/images/logo.jpg" alt="बोधचिन्ह" width="56" height="56" class="rounded-circle" style="border: 2px solid var(--color-gold); object-fit: cover;" />
+                  <div>
+                    <h3 class="h4 fw-bold mb-0 text-gold" data-i18n="heroSideTitle">थोरल्या माँसाहेब जिजाऊ सेवा संस्था</h3>
+                    <small class="text-light opacity-75" data-i18n="heroSideSub">सामनगाव, नाशिक</small>
+                  </div>
+                </div>
+
+                <p class="text-light opacity-90 mb-3" style="font-size: 1.05rem; line-height: 1.7;" data-i18n="heroSideDesc">
+                  हे केवळ वृद्धाश्रम नाही, तर आपल्या ज्येष्ठांसाठी प्रेम, माया, आपुलकी आणि सन्मानाची एक हक्काची जागा आहे. बालगृह आणि गोशाळेच्या माध्यमातून अविरत समाजसेवा घडत आहे.
+                </p>
+
+                <div class="d-flex gap-2 flex-wrap mb-3">
+                  <span class="badge bg-success bg-opacity-75 py-2 px-3 rounded-pill" data-i18n="heroBadgeSecure">
+                    <i class="bi bi-shield-check me-1"></i> सुरक्षित वातावरण
+                  </span>
+                  <span class="badge bg-warning text-dark py-2 px-3 rounded-pill" data-i18n="heroBadgePeace">
+                    <i class="bi bi-tree me-1"></i> शांत परिसर
+                  </span>
+                </div>
+
+                <div class="pt-3 border-top border-light border-opacity-25 small text-light opacity-75">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span>संस्था चालक:</span>
+                    <strong class="text-white">श्री. राजेंद्र चोपडा</strong>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>थेट संपर्क:</span>
+                    <a href="tel:+918530333119" class="text-gold fw-bold text-decoration-none">+91 85303 33119</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#quickInfo" class="hero-scroll-indicator" aria-label="खाली स्क्रोल करा">
+          <span data-i18n="heroScrollText">खालील सेवा जाणून घ्या</span>
+          <i class="bi bi-chevron-down mt-1"></i>
+        </a>
+      </section>
+
+      <!-- ==========================================================================
+           HOMEPAGE: THREE SERVICE IDENTITY CARDS
+           ========================================================================== -->
+      <section class="py-5 section-bg-cream" id="homeIdentityCards">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Card 1: ज्येष्ठांची सेवा -->
+            <div class="col-md-4">
+              <div class="home-identity-card">
+                <div class="home-identity-icon">
+                  <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+                <h3 data-i18n="homeCard1Title">❤️ ज्येष्ठांची सेवा</h3>
+                <div class="home-identity-sub" data-i18n="homeCard1Sub">सुरक्षितता • काळजी • सहवास • सन्मान</div>
+                <p class="home-identity-desc" data-i18n="homeCard1Desc">
+                  ज्येष्ठ नागरिकांसाठी निवांत, सुरक्षित आणि घरच्यासारखे आपुलकीचे वातावरण.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: बालगृह -->
+            <div class="col-md-4">
+              <div class="home-identity-card">
+                <div class="home-identity-icon" style="background-color: #FEF3C7; color: #B45309;">
+                  <i class="bi bi-emoji-smile-fill"></i>
+                </div>
+                <h3 data-i18n="homeCard2Title">🌸 बालगृह</h3>
+                <div class="home-identity-sub" data-i18n="homeCard2Sub">सुरक्षित व प्रेमळ वातावरण • आधार</div>
+                <p class="home-identity-desc" data-i18n="homeCard2Desc">
+                  बालकांसाठी सुरक्षित, प्रेमळ आणि संस्कारक्षम वातावरण. नुकताच सुरू केलेला उपक्रम.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: गोशाळा -->
+            <div class="col-md-4">
+              <div class="home-identity-card">
+                <div class="home-identity-icon" style="background-color: #E8F1EC; color: #1B4332;">
+                  <i class="bi bi-flower1"></i>
+                </div>
+                <h3 data-i18n="homeCard3Title">🐄 गोशाळा</h3>
+                <div class="home-identity-sub" data-i18n="homeCard3Sub">संरक्षण • संगोपन • दैनंदिन काळजी</div>
+                <p class="home-identity-desc" data-i18n="homeCard3Desc">
+                  देशी गोवंशाचे प्रेमाने संगोपन, संरक्षण आणि दैनंदिन सेवा. नवीन उपक्रम.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           2. QUICK INFO BAR
+           ========================================================================== -->
+      <section id="quickInfo" class="quick-info-section" aria-label="महत्त्वाची माहिती">
+        <div class="container">
+          <div class="row g-3">
+            <!-- Location -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="quick-card" id="cardLocation">
+                <div class="quick-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <div class="quick-card-title" data-i18n="cardLocTitle">📍 ठिकाण</div>
+                  <div class="quick-card-text" data-i18n="cardLocVal">सामनगाव, नाशिक</div>
+                  <div class="quick-card-sub" data-i18n="cardLocSub">एकलहरे परिसर, महाराष्ट्र</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sanstha Chalak / Manager -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="quick-card" id="cardManager">
+                <div class="quick-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-person-fill-check"></i>
+                </div>
+                <div>
+                  <div class="quick-card-title" data-i18n="cardMgrTitle">❤️ संस्था चालक</div>
+                  <div class="quick-card-text" data-i18n="cardMgrVal">श्री. राजेंद्र चोपडा</div>
+                  <div class="quick-card-sub" data-i18n="cardMgrSub">थोरल्या माँसाहेब जिजाऊ सेवा संस्था</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact & Visiting Hours -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="quick-card" id="cardHours">
+                <div class="quick-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <div>
+                  <div class="quick-card-title" data-i18n="cardTimeTitle">🕐 संपर्क व भेट वेळ</div>
+                  <div class="quick-card-text" data-i18n="cardTimeVal">संध्याकाळी ८ वाजेपर्यंत</div>
+                  <div class="quick-card-sub" data-i18n="cardTimeSub">नियमित कार्यालयीन वेळ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Philosophy / Thought -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="quick-card" id="cardThought">
+                <div class="quick-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-chat-heart-fill"></i>
+                </div>
+                <div>
+                  <div class="quick-card-title" data-i18n="cardThoughtTitle">🌿 आमचा विचार</div>
+                  <div class="quick-card-text" data-i18n="cardThoughtVal">प्रेम, माया व सन्मान</div>
+                  <div class="quick-card-sub" data-i18n="cardThoughtSub">ज्येष्ठांना सन्मानाचे वातावरण मिळावे</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           3. DEDICATED SECTION: “सेवेची तीन दालने” (THREE WINGS OF SERVICE)
+           ========================================================================== -->
+      <section id="wings" class="section-padding section-bg-white" aria-label="सेवेची तीन दालने">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-grid-3x3-gap-fill text-success"></i> <span data-i18n="wingsTag">समर्पित सेवा उपक्रम</span>
+            </div>
+            <h2 class="section-title text-center" id="wingsHeading" data-i18n="wingsTitle">सेवेची तीन दालने</h2>
+            <p class="text-muted mx-auto" style="max-width: 720px; font-size: 1.15rem;" data-i18n="wingsSubtitle">
+              थोरल्या माँसाहेब जिजाऊ सेवा संस्थेच्या छत्राखाली चालणारे तीन प्रमुख समाजोपयोगी सेवा विभाग.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Wing 1: वृद्धाश्रम सेवा -->
+            <div class="col-lg-4">
+              <div class="wing-card" id="wingCardElderly">
+                <span class="wing-badge-pill wing-badge-primary" data-i18n="wing1Badge">मुख्य दालन</span>
+                <h3 class="wing-card-title" data-i18n="wing1Title">१. वृद्धाश्रम सेवा</h3>
+                <div class="wing-points-box" data-i18n="wing1Points">सुरक्षितता • सहवास • काळजी • सन्मान</div>
+                <p class="wing-card-desc" data-i18n="wing1Desc">
+                  ज्येष्ठ नागरिकांसाठी प्रेमळ सहवास, सात्त्विक आहार, वैद्यकीय मार्गदर्शन आणि सन्मानपूर्वक जीवन देणारी आदर्श निवासी वृद्धाश्रम सेवा.
+                </p>
+                <button type="button" class="btn-wing-more" data-wing="elderly" data-i18n="wing1MoreBtn">
+                  अधिक माहिती <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Wing 2: बालगृह -->
+            <div class="col-lg-4">
+              <div class="wing-card" id="wingCardChild">
+                <span class="wing-badge-pill wing-badge-new" data-i18n="wing2Badge">नुकताच सुरू केलेला उपक्रम</span>
+                <h3 class="wing-card-title" data-i18n="wing2Title">२. बालगृह</h3>
+                <div class="wing-points-box" data-i18n="wing2Points">सुरक्षित वातावरण • प्रेमळ वातावरण • आधार</div>
+                <p class="wing-card-desc" data-i18n="wing2Desc">
+                  मुलांसाठी प्रेम, माया, शिक्षण आणि सुरक्षित निवाऱ्याची सोय. बालकांसाठी एक सुरक्षित व आश्वासक आधारस्तंभ.
+                </p>
+                <div class="wing-self-fund-box" data-i18n="wing2SelfFundNotice">
+                  <i class="bi bi-info-circle-fill"></i> विशेष नोंद: बालगृहाचा खर्च स्वखर्चाने करतात.
+                </div>
+                <button type="button" class="btn-wing-more" data-wing="child" data-i18n="wing2MoreBtn">
+                  अधिक माहिती <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Wing 3: गोशाळा -->
+            <div class="col-lg-4">
+              <div class="wing-card" id="wingCardGoshala">
+                <span class="wing-badge-pill wing-badge-primary" data-i18n="wing3Badge">नवीन उपक्रम</span>
+                <h3 class="wing-card-title" data-i18n="wing3Title">३. गोशाळा</h3>
+                <div class="wing-points-box" data-i18n="wing3Points">संरक्षण • संगोपन • दैनंदिन काळजी</div>
+                <p class="wing-card-desc" data-i18n="wing3Desc">
+                  गोमातेचे संरक्षण, शुद्ध चारा-पाणी, नियमित आरोग्य काळजी आणि प्रेमळ संगोपनाची निरंतर सेवा.
+                </p>
+                <button type="button" class="btn-wing-more" data-wing="goshala" data-i18n="wing3MoreBtn">
+                  अधिक माहिती <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           4. ABOUT US — आमच्याबद्दल
+           ========================================================================== -->
+      <section id="about" class="section-padding section-bg-cream" aria-label="आमच्याबद्दल माहिती">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="about-photo-wrapper">
+                <img
+                  id="aboutPhoto"
+                  src="/images/IMG_20260905_134325477_HDR_PORTRAIT.jpg"
+                  alt="थोरल्या माँसाहेब जिजाऊ सेवा संस्था आश्रम परिसर व मंदिर"
+                  class="img-fluid rounded-4 shadow-md w-100"
+                  style="max-height: 480px; object-fit: cover;"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="if (this.src.indexOf('ashram-campus.jpg') === -1) { this.src='/images/ashram-campus.jpg'; } else { this.src='/images/ashram-building.jpg'; }"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="section-tagline">
+                <i class="bi bi-heart-fill text-danger"></i> <span data-i18n="aboutTag">आपलेपणाचा जिव्हाळा</span>
+              </div>
+              <h2 class="section-title" id="aboutHeading" data-i18n="aboutTitle">आमच्याबद्दल</h2>
+
+              <p class="text-marathi-lead" data-i18n="aboutLead1">
+                <strong>थोरल्या माँसाहेब जिजाऊ सेवा संस्था</strong> (रजि. एफ-3983 नाशिक, स्थापना: 18-1-1996) हे समाजसेवेचे पवित्र कार्य अविरतपणे करत आहे.
+              </p>
+
+              <blockquote class="about-quote-box" data-i18n="aboutQuote">
+                “वयाच्या या टप्प्यावर केवळ निवारा पुरेसा नसतो. प्रेमाने दोन शब्द बोलणारे, आपलेपणाने विचारपूस करणारे आणि गरजेच्या वेळी आधार देणारे माणुसकीचे नातेही तितकेच महत्त्वाचे असते.”
+              </blockquote>
+
+              <p class="text-marathi-lead" data-i18n="aboutLead2">
+                संस्थेच्या माध्यमातून केवळ ज्येष्ठ नागरिकांचीच नव्हे, तर निराधार बालकांसाठी बालगृह आणि गोमातेच्या सेवेसाठी गोशाळा अशी तिहेरी समाजोपयोगी सेवा सुरू आहे. आपल्या ज्येष्ठांना घरच्यासारखी माया, प्रेम आणि आधार मिळावा, यासाठी आपुलकीचे वातावरण निर्माण केले जाते.
+              </p>
+
+              <!-- 4 Pillars of the Institution -->
+              <div class="row g-2 my-3">
+                <div class="col-6">
+                  <div class="p-2 bg-white rounded-3 border d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <strong data-i18n="aboutPillar1">ज्येष्ठांची सेवा</strong>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-2 bg-white rounded-3 border d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <strong data-i18n="aboutPillar2">बालकांसाठी आधार</strong>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-2 bg-white rounded-3 border d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <strong data-i18n="aboutPillar3">गोवंशाची काळजी</strong>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-2 bg-white rounded-3 border d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <strong data-i18n="aboutPillar4">समाजाचा सहभाग</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Emotional Values Tags -->
+              <div class="about-values-cloud mt-4">
+                <span class="value-chip" data-i18n="aboutVal1">आपलेपणा</span>
+                <span class="value-chip" data-i18n="aboutVal2">माया</span>
+                <span class="value-chip" data-i18n="aboutVal3">प्रेम</span>
+                <span class="value-chip" data-i18n="aboutVal4">जिव्हाळा</span>
+                <span class="value-chip" data-i18n="aboutVal5">आदर</span>
+                <span class="value-chip" data-i18n="aboutVal6">माणुसकी</span>
+                <span class="value-chip" data-i18n="aboutVal7">विश्वास</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           5. OUR WORK — आमचे कार्य
+           ========================================================================== -->
+      <section id="work" class="section-padding section-bg-white" aria-label="आमचे कार्य">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-hand-thumbs-up-fill text-success"></i> <span data-i18n="workTag">सातत्यपूर्ण सेवाभाव</span>
+            </div>
+            <h2 class="section-title text-center" id="workHeading" data-i18n="workTitle">आमचे कार्य</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="workSubtitle">
+              ज्येष्ठांच्या जीवनात सुरक्षितता, स्वास्थ्य आणि आपुलकीचे क्षण जपण्याचा आमचा प्रामाणिक प्रयत्न.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- 1. ज्येष्ठांची काळजी -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card" id="workCard1">
+                <div class="work-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+                <h3 class="work-card-title" data-i18n="work1Title">❤️ ज्येष्ठांची काळजी</h3>
+                <p class="work-card-desc" data-i18n="work1Desc">
+                  प्रत्येक ज्येष्ठ व्यक्तीच्या दैनंदिन गरजा समजून घेऊन, त्यांची प्रेमाने, आदराने आणि आपुलकीने काळजी घेण्याचा प्रयत्न केला जातो.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. आपुलकीचा सहवास -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card" id="workCard2">
+                <div class="work-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h3 class="work-card-title" data-i18n="work2Title">🤝 आपुलकीचा सहवास</h3>
+                <p class="work-card-desc" data-i18n="work2Desc">
+                  दोन प्रेमळ शब्द, थोडा संवाद आणि काही क्षणांचा सहवासही मनाला खूप मोठा आधार देतो. म्हणून आपुलकीच्या सहवासाला सर्वोच्च महत्त्व दिले जाते.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. सन्मानपूर्वक जीवन -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card" id="workCard3">
+                <div class="work-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-shield-shaded"></i>
+                </div>
+                <h3 class="work-card-title" data-i18n="work3Title">🌿 सन्मानपूर्वक जीवन</h3>
+                <p class="work-card-desc" data-i18n="work3Desc">
+                  प्रत्येक ज्येष्ठ व्यक्तीला आदर, सन्मान आणि आपलेपणाची भावना मिळावी, यासाठी संस्थेत अत्यंत सकारात्मक आणि आनंदी वातावरण निर्माण केले आहे.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. समाजाशी जोडणी -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card" id="workCard4">
+                <div class="work-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-globe2"></i>
+                </div>
+                <h3 class="work-card-title" data-i18n="work4Title">❤️ समाजाशी जोडणी</h3>
+                <p class="work-card-desc" data-i18n="work4Desc">
+                  ज्येष्ठ नागरिकांशी समाजाचे नाते अधिक घट्ट व्हावे आणि त्यांच्या आयुष्यात आनंदाचे काही क्षण यावेत, यासाठी विविध सामाजिक संस्था व नागरिकांचा सहभाग वाढवला जातो.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           6. BEYOND SERVICE — ONE FAMILY (सेवेपलीकडे — एक कुटुंब)
+           ========================================================================== -->
+      <section id="family" class="section-padding section-bg-cream" aria-label="सेवेपलीकडे एक कुटुंब">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-heart-half text-danger"></i> <span data-i18n="familyTag">भावनिक नातं</span>
+            </div>
+            <h2 class="section-title text-center" data-i18n="familyTitle">सेवेपलीकडे — एक कुटुंब</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="familySubtitle">
+              येथे केवळ सेवा दिली जात नाही, तर प्रत्येक व्यक्ती कुटुंबातील सदस्याप्रमाणे सन्मान आणि प्रेम अनुभवते.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="family-feature-card">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="quick-icon-wrap bg-success bg-opacity-10 text-success">
+                    <i class="bi bi-house-heart-fill fs-3"></i>
+                  </div>
+                  <h3 class="h4 fw-bold mb-0 text-dark" data-i18n="family1Title">🏡 सुरक्षित आश्रय</h3>
+                </div>
+                <p class="text-muted fs-5 mb-0" data-i18n="family1Desc">
+                  शांत, निसर्गरम्य आणि सुरक्षित निवाऱ्यात प्रत्येकाला घरच्यासारखे सुरक्षित आणि आश्वस्त वाटते.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="family-feature-card">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="quick-icon-wrap bg-warning bg-opacity-15 text-warning">
+                    <i class="bi bi-sun-fill fs-3"></i>
+                  </div>
+                  <h3 class="h4 fw-bold mb-0 text-dark" data-i18n="family2Title">🌱 सक्रिय आणि अर्थपूर्ण जीवन</h3>
+                </div>
+                <p class="text-muted fs-5 mb-0" data-i18n="family2Desc">
+                  प्रार्थना, वाचन, गप्पागोष्टी आणि हलक्याफुलक्या उपक्रमांमधून प्रत्येकाचे जीवन आनंददायी आणि अर्थपूर्ण राहते.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="family-quote-banner">
+            <p data-i18n="familyQuote">“केवळ निवास नव्हे, तर आपुलकीचे नाते जपण्याचा प्रयत्न.”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           7. FACILITIES — आमच्या सुविधा (INCLUDING DRESS CODE)
+           ========================================================================== -->
+      <section id="facilities" class="section-padding section-bg-white" aria-label="आमच्या सुविधा">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-check2-circle text-success"></i> <span data-i18n="facTag">आपुलकीची व्यवस्था</span>
+            </div>
+            <h2 class="section-title text-center" id="facilitiesHeading" data-i18n="facTitle">आमच्या सुविधा</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="facSubtitle">
+              ज्येष्ठांच्या सुलभ, सन्माननीय आणि शांत जीवनासाठी आवश्यक असणाऱ्या मूलभूत व आपुलकीच्या सोयी-सुविधा.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- 1. शुद्ध शाकाहारी आहार -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard1">
+                <div class="facility-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-egg-fried"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac1Title">🥗 शुद्ध शाकाहारी आहाराची सोय</h3>
+                <p class="facility-card-desc" data-i18n="fac1Desc">
+                  आपल्या ज्येष्ठांसाठी दररोज ताजे, सकस आणि शुद्ध शाकाहारी आहाराची नियमित सोय केली जाते.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. वैयक्तिक काळजी -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard2">
+                <div class="facility-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac2Title">❤️ वैयक्तिक काळजी आणि आपुलकी</h3>
+                <p class="facility-card-desc" data-i18n="fac2Desc">
+                  प्रत्येक ज्येष्ठ व्यक्तीला आपुलकीने समजून घेऊन, त्यांच्या वैयक्तिक गरजांकडे विशेष लक्ष देण्याचा प्रयत्न केला जातो.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. योग्य मार्गदर्शन -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard3">
+                <div class="facility-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-compass-fill"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac3Title">🌿 योग्य मार्गदर्शन</h3>
+                <p class="facility-card-desc" data-i18n="fac3Desc">
+                  दैनंदिन जीवनात आरोग्यविषयक तसेच मानसिक समाधानासाठी आवश्यक ते योग्य मार्गदर्शन व आधार दिला जातो.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. शुद्ध आणि सात्त्विक भोजन -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard4">
+                <div class="facility-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-cup-hot-fill"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac4Title">🍲 शुद्ध आणि सात्त्विक भोजन</h3>
+                <p class="facility-card-desc" data-i18n="fac4Desc">
+                  भोजन शुद्ध, सात्त्विक आणि मनापासून केलेले असावे, याला संस्थेत नेहमीच सर्वोच्च महत्त्व दिले जाते.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. दैनंदिन निवासी सोय -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard5">
+                <div class="facility-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-house-door-fill"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac5Title">🏡 दैनंदिन निवासाची सोय</h3>
+                <p class="facility-card-desc" data-i18n="fac5Desc">
+                  ज्येष्ठ नागरिकांच्या दैनंदिन सुलभ निवासासाठी स्वच्छ खोल्या, हवेशीर वातावरण आणि आपुलकीचा परिसर.
+                </p>
+              </div>
+            </div>
+
+            <!-- 6. जैन साधू-संत आहार-विहार सोय -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard6">
+                <div class="facility-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-brightness-high-fill"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac6Title">🙏 जैन साधू-संतांसाठी आहार-विहाराची सोय</h3>
+                <p class="facility-card-desc" data-i18n="fac6Desc">
+                  जैन साधू-संतांच्या आहार-विहाराच्या पवित्र नियमांचा आदर ठेवून त्यांच्या दैनंदिन निवासाची आणि शुद्ध आहाराची विशेष सोय केली जाते.
+                </p>
+              </div>
+            </div>
+
+            <!-- 7. निवासी वृद्धांना ड्रेस कोड (Dress Code for Resident Elders) -->
+            <div class="col-md-6 col-lg-4">
+              <div class="facility-card" id="facCard7" style="border-left: 4px solid var(--color-gold);">
+                <div class="facility-icon-wrap" aria-hidden="true" style="background-color: #FEF3C7; color: #B45309;">
+                  <i class="bi bi-person-badge-fill"></i>
+                </div>
+                <h3 class="facility-card-title" data-i18n="fac7Title">👕 निवासी वृद्धांना ड्रेस कोड</h3>
+                <p class="facility-card-desc" data-i18n="fac7Desc">
+                  आश्रमातील सर्व निवासी ज्येष्ठ नागरिकांसाठी स्वच्छ, सुटसुटीत आणि सन्माननीय ड्रेस कोडची शिस्तबद्ध व्यवस्था केली जाते.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           8. DAILY ROUTINE — आमची रोजची दिनचर्या
+           ========================================================================== -->
+      <section id="routine" class="section-padding section-bg-cream" aria-label="दैनंदिन दिनचर्या">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-clock-fill text-success"></i> <span data-i18n="routineTag">नियमित व निवांत दिनक्रम</span>
+            </div>
+            <h2 class="section-title text-center" id="routineHeading" data-i18n="routineTitle">आमची रोजची दिनचर्या</h2>
+            <p class="text-muted mx-auto mb-3" style="max-width: 680px; font-size: 1.15rem;" data-i18n="routineSubtitle">
+              वेळेची शिस्त आणि निवांतपणा यांचा समतोल ठेवत, दिवसाची साधी आणि नियमित दिनचर्या जपली जाते.
+            </p>
+            <!-- Sample schedule disclaimer -->
+            <div class="future-notice-bar mx-auto" style="max-width: 760px;" data-i18n="routineDisclaimer">
+              📌 नमुना दैनंदिन दिनक्रम — अधिकृत वेळापत्रक संस्थेकडून उपलब्ध झाल्यानंतर अपडेट करण्यात येईल.
+            </div>
+          </div>
+
+          <div class="routine-timeline-wrapper">
+            <div class="row g-3 justify-content-center">
+              <!-- Routine 1 -->
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="routine-step-card" id="routineStep1">
+                  <div class="routine-step-time" data-i18n="routine1Time">🌅 सकाळी ७:००</div>
+                  <div class="routine-step-act" data-i18n="routine1Act">सकाळचा चहा</div>
+                </div>
+              </div>
+
+              <!-- Routine 2 -->
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="routine-step-card" id="routineStep2">
+                  <div class="routine-step-time" data-i18n="routine2Time">🍽️ सकाळी ९:००</div>
+                  <div class="routine-step-act" data-i18n="routine2Act">नाश्ता</div>
+                </div>
+              </div>
+
+              <!-- Routine 3 -->
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="routine-step-card" id="routineStep3">
+                  <div class="routine-step-time" data-i18n="routine3Time">🍛 दुपारी १२:००</div>
+                  <div class="routine-step-act" data-i18n="routine3Act">दुपारचे भोजन</div>
+                </div>
+              </div>
+
+              <!-- Routine 4 -->
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="routine-step-card" id="routineStep4">
+                  <div class="routine-step-time" data-i18n="routine4Time">😴 दुपारी १:०० ते ४:००</div>
+                  <div class="routine-step-act" data-i18n="routine4Act">दुपारची विश्रांती</div>
+                </div>
+              </div>
+
+              <!-- Routine 5 -->
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="routine-step-card" id="routineStep5">
+                  <div class="routine-step-time" data-i18n="routine5Time">☕ सायंकाळी ४:००</div>
+                  <div class="routine-step-act" data-i18n="routine5Act">सायंकाळचा चहा</div>
+                </div>
+              </div>
+
+              <!-- Routine 6 -->
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="routine-step-card" id="routineStep6">
+                  <div class="routine-step-time" data-i18n="routine6Time">🍽️ सायंकाळी ७:००</div>
+                  <div class="routine-step-act" data-i18n="routine6Act">रात्रीचे जेवण</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           9. PROGRAMS & ACTIVITIES — कार्यक्रम आणि उपक्रम (ALL 8 ACTIVITIES)
+           ========================================================================== -->
+      <section id="programs" class="section-padding section-bg-white" aria-label="कार्यक्रम आणि उपक्रम">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-stars text-warning"></i> <span data-i18n="progTag">उत्साह आणि उपक्रम</span>
+            </div>
+            <h2 class="section-title text-center" id="programsHeading" data-i18n="progTitle">कार्यक्रम आणि उपक्रम</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="progSubtitle">
+              ज्येष्ठांच्या शारीरिक व मानसिक आरोग्यासाठी आणि आनंदासाठी संस्थेत विविध उपक्रम नियमित राबवले जातात.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- 1. प्रार्थना व आध्यात्मिक वेळ -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-sun"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act1Title">🙏 प्रार्थना व आध्यात्मिक वेळ</h3>
+                <p class="text-muted small mb-0" data-i18n="act1Desc">
+                  मनाच्या शांतीसाठी आणि सकारात्मकतेसाठी सकाळ-संध्याकाळ भजने, नामस्मरण व सामूहिक प्रार्थना.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. सर्जनशील उपक्रम -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-palette"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act2Title">🎨 सर्जनशील उपक्रम</h3>
+                <p class="text-muted small mb-0" data-i18n="act2Desc">
+                  हस्तकला, संगीत, रांगोळी व कलात्मक कृतींद्वारे ज्येष्ठांच्या प्रतिभेला आणि आनंदाला वाव.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. वाचन आणि ग्रंथालय -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-book"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act3Title">📖 वाचन आणि ग्रंथालय</h3>
+                <p class="text-muted small mb-0" data-i18n="act3Desc">
+                  वृत्तपत्रे, धार्मिक व ज्ञानवर्धक पुस्तके आणि वाचनाची निवांत आवड जोपासण्याची सुविधा.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. सण आणि विशेष दिवस -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-cake2"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act4Title">🪔 सण आणि विशेष दिवस</h3>
+                <p class="text-muted small mb-0" data-i18n="act4Desc">
+                  दिवाळी, गुढीपाडवा, संक्रांत, स्वातंत्र्यदिन व वाढदिवस सर्व ज्येष्ठ एकत्र येऊन उत्साहाने साजरे करतात.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. सामाजिक भेटी -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-people"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act5Title">🤝 सामाजिक भेटी</h3>
+                <p class="text-muted small mb-0" data-i18n="act5Desc">
+                  शाळा, महाविद्यालये व सामाजिक कार्यकर्त्यांच्या भेटींमुळे ज्येष्ठांना समाजाचा प्रेमळ सहवास लाभतो.
+                </p>
+              </div>
+            </div>
+
+            <!-- 6. मैदानी / मनोरंजनात्मक वेळ -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-tree"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act6Title">🌳 मैदानी / मनोरंजनात्मक वेळ</h3>
+                <p class="text-muted small mb-0" data-i18n="act6Desc">
+                  हिरव्यागार निसर्गरम्य आवारात संध्याकाळची फेरफटका, हलका व्यायाम आणि हसतखेळत संवाद.
+                </p>
+              </div>
+            </div>
+
+            <!-- 7. गोशाळेची दैनंदिन काळजी -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-flower2"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act7Title">🐄 गोशाळेची दैनंदिन काळजी</h3>
+                <p class="text-muted small mb-0" data-i18n="act7Desc">
+                  गोमातेचे पूजन, दर्शन, चारा देणे व गोशाळेच्या पवित्र वातावरणात प्रसन्न वेळ घालवणे.
+                </p>
+              </div>
+            </div>
+
+            <!-- 8. बालगृहातील उपक्रम -->
+            <div class="col-md-6 col-lg-3">
+              <div class="work-card">
+                <div class="work-icon-wrap"><i class="bi bi-emoji-heart-eyes"></i></div>
+                <h3 class="h5 fw-bold" data-i18n="act8Title">👧 बालगृहातील उपक्रम</h3>
+                <p class="text-muted small mb-0" data-i18n="act8Desc">
+                  बालगृहातील लहान मुलांसोबत गोष्टी सांगणे, संस्कार देणे आणि आजी-आजोबांचे प्रेम वाटणे.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Balgruha Highlight Banner -->
+          <div class="mt-4 p-4 rounded-4 shadow-sm" style="background-color: #FEF3C7; border: 1px solid #FCD34D;">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-heart-fill text-danger fs-2"></i>
+              <div>
+                <h4 class="h5 fw-bold text-dark mb-1" data-i18n="progBalgruhaNoticeTitle">❤️ बालगृहासाठी सहकार्य उपक्रम</h4>
+                <p class="text-dark opacity-90 mb-0 fs-6" data-i18n="progBalgruhaNoticeDesc">
+                  संस्थेच्या बालगृहाचा संपूर्ण खर्च संस्था चालक स्वखर्चाने करतात. या पवित्र कार्यात लहानग्यांना उज्ज्वल भविष्य देण्याचा संकल्प आहे.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           10. UPCOMING EVENTS — आगामी कार्यक्रम (DYNAMIC)
+           ========================================================================== -->
+      <section id="events" class="section-padding section-bg-cream" aria-label="आगामी कार्यक्रम">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-calendar-event text-primary"></i> <span data-i18n="eventsTag">पुढील नियोजन</span>
+            </div>
+            <h2 class="section-title text-center" data-i18n="eventsTitle">आगामी कार्यक्रम</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="eventsSubtitle">
+              संस्थेत आयोजित होणाऱ्या विशेष सण, मेळावे आणि सामाजिक उपक्रमांचे वेळापत्रक.
+            </p>
+          </div>
+
+          <!-- Official Notice Banner -->
+          <div class="event-official-notice mx-auto mb-4" style="max-width: 820px;" data-i18n="eventNoticeText">
+            ℹ️ आगामी कार्यक्रमांची माहिती संस्थेकडून उपलब्ध झाल्यानंतर येथे अपडेट करण्यात येईल.
+          </div>
+
+          <!-- Dynamic Events Container: Fetched dynamically from /api/events -->
+          <div id="dynamicEventsWrap">
+            <!-- Empty state when no upcoming events are published -->
+            <div id="eventsEmptyState" class="dynamic-events-empty">
+              <i class="bi bi-calendar-x"></i>
+              <div class="dynamic-events-empty-text" data-i18n="noEventsText">सध्या कोणतेही आगामी कार्यक्रम नाहीत.</div>
+              <p class="dynamic-events-empty-sub" data-i18n="noEventsSub">संस्थेकडून नवीन कार्यक्रम जाहीर झाल्यावर येथे तात्काळ माहिती उपलब्ध होईल.</p>
+            </div>
+
+            <!-- Dynamic Events Grid -->
+            <div id="dynamicEventsGrid" class="dynamic-events-grid d-none">
+              <!-- Dynamically populated via js/script.js -->
+            </div>
+          </div>
+
+          <!-- Admin Link for Event Updates -->
+          <div class="text-center mt-4 pt-2">
+            <a href="/admin" class="btn btn-sm btn-outline-success d-inline-flex align-items-center gap-2 px-3 py-2" target="_blank">
+              <i class="bi bi-shield-lock-fill"></i>
+              <span data-i18n="adminEventLink">कार्यक्रम व्यवस्थापन (अ‍ॅडमिन)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           11. COMMUNITY PARTICIPATION — समाजाचा सहभाग
+           ========================================================================== -->
+      <section id="community" class="section-padding section-bg-white" aria-label="समाजाचा सहभाग">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-people-fill text-success"></i> <span data-i18n="commTag">सामाजिक बांधिलकी</span>
+            </div>
+            <h2 class="section-title text-center" id="communityHeading" data-i18n="commTitle">समाजाचा सहभाग</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="commSubtitle">
+              आपले थोडेसे सहकार्य आणि आपुलकी ज्येष्ठांच्या चेहऱ्यावर अनमोल हास्य फुलवू शकते.
+            </p>
+
+            <!-- 6 Concepts Tags -->
+            <div class="about-values-cloud justify-content-center mt-3">
+              <span class="value-chip" data-i18n="commPillar1">भेट देणे</span>
+              <span class="value-chip" data-i18n="commPillar2">वेळ देणे</span>
+              <span class="value-chip" data-i18n="commPillar3">संवाद साधणे</span>
+              <span class="value-chip" data-i18n="commPillar4">आपुलकी</span>
+              <span class="value-chip" data-i18n="commPillar5">सामाजिक सहभाग</span>
+              <span class="value-chip" data-i18n="commPillar6">छोट्या योगदानाचे महत्त्व</span>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <!-- 1. भेट द्या -->
+            <div class="col-md-6 col-lg-3">
+              <div class="community-card" id="commCard1">
+                <div class="community-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-balloon-heart-fill"></i>
+                </div>
+                <h3 class="community-card-title" data-i18n="commAction1Title">🌸 भेट द्या</h3>
+                <p class="community-card-desc" data-i18n="commAction1Desc">
+                  संस्थेला सवड काढून सदिच्छा भेट द्या. ज्येष्ठांशी दोन शब्द बोलून त्यांच्यासोबत आनंद वाटा.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. स्वयंसेवक व्हा -->
+            <div class="col-md-6 col-lg-3">
+              <div class="community-card" id="commCard2">
+                <div class="community-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-hand-index-thumb-fill"></i>
+                </div>
+                <h3 class="community-card-title" data-i18n="commAction2Title">🤝 स्वयंसेवक व्हा</h3>
+                <p class="community-card-desc" data-i18n="commAction2Desc">
+                  आपली कला, वाचन, वैद्यकीय सेवा किंवा उपक्रमांमध्ये स्वयंसेवक म्हणून योगदान द्या.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. मदत कशी करावी -->
+            <div class="col-md-6 col-lg-3">
+              <div class="community-card" id="commCard3">
+                <div class="community-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-gift-fill"></i>
+                </div>
+                <h3 class="community-card-title" data-i18n="commAction3Title">🎁 मदत कशी करावी</h3>
+                <p class="community-card-desc" data-i18n="commAction3Desc">
+                  अन्नदान, किराणा सामान, गोशाळेसाठी चारा किंवा बालगृहातील मुलांसाठी शैक्षणिक मदत करू शकता.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. मदतीसाठी संपर्क करा -->
+            <div class="col-md-6 col-lg-3">
+              <div class="community-card" id="commCard4">
+                <div class="community-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-telephone-inbound-fill"></i>
+                </div>
+                <h3 class="community-card-title" data-i18n="commAction4Title">📞 मदतीसाठी संपर्क करा</h3>
+                <p class="community-card-desc" data-i18n="commAction4Desc">
+                  कोणत्याही स्वरूपाच्या सहकार्यासाठी किंवा माहितीसाठी थेट संस्था चालकांशी संपर्क साधा.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a href="#donation" class="btn-hero-primary" id="btnCommunityContact">
+              <i class="bi bi-box2-heart-fill me-1"></i> <span data-i18n="commBtn">मदतीसाठी संपर्क करा</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           11B. DONATION / SUPPORT SECTION — आपणही मदतीचा हात पुढे करा (PHYSICAL DONATIONS ONLY)
+           ========================================================================== -->
+      <section id="donation" class="section-padding section-bg-cream" aria-label="आपणही मदतीचा हात पुढे करा">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-box2-heart-fill text-danger"></i> <span data-i18n="donationTag">सामाजिक सहकार्य व मदत</span>
+            </div>
+            <h2 class="section-title text-center" id="donationHeading" data-i18n="donationTitle">आपणही मदतीचा हात पुढे करा</h2>
+            <p class="text-muted mx-auto" style="max-width: 740px; font-size: 1.15rem;" data-i18n="donationSubtitle">
+              आपल्याला अन्न, कपडे, किराणा किंवा इतर आवश्यक वस्तू देऊन संस्थेला सहकार्य करायचे असल्यास खाली आपली माहिती आणि देऊ इच्छित असलेल्या वस्तूंची माहिती भरा.
+            </p>
+            <!-- Prominent Physical-Items-Only Guarantee (No Online Money Payments) -->
+            <div class="alert alert-warning border-0 rounded-4 shadow-sm mx-auto mt-3 py-2 px-3 d-inline-flex align-items-center gap-2 text-start" style="max-width: 720px; font-size: 0.95rem; background-color: #FEF3C7; color: #92400E;">
+              <i class="bi bi-info-circle-fill fs-5 flex-shrink-0"></i>
+              <span data-i18n="donationNotice">नोंद: हा विभाग केवळ प्रत्यक्ष उपयुक्त वस्तू दान करण्यासाठी आहे. आम्ही कोणतीही ऑनलाईन पैशांची देणगी / व्यवहार घेत नाही.</span>
+            </div>
+          </div>
+
+          <!-- Accepted Items Overview Cards -->
+          <div class="row g-3 mb-5">
+            <div class="col-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center bg-white">
+                <div class="rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 52px; height: 52px; background: rgba(220, 38, 38, 0.1); color: #DC2626;">
+                  <i class="bi bi-basket-fill fs-4"></i>
+                </div>
+                <h4 class="h6 fw-bold mb-1" data-i18n="donCardFoodTitle">अन्नदान व भोजन</h4>
+                <p class="small text-muted mb-0" data-i18n="donCardFoodDesc">वृद्धाश्रमातील ज्येष्ठ व बालगृहातील मुलांसाठी तयार अन्न किंवा शिधा.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center bg-white">
+                <div class="rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 52px; height: 52px; background: rgba(5, 150, 105, 0.1); color: #059669;">
+                  <i class="bi bi-layers-fill fs-4"></i>
+                </div>
+                <h4 class="h6 fw-bold mb-1" data-i18n="donCardClothesTitle">कपडे व वस्त्र</h4>
+                <p class="small text-muted mb-0" data-i18n="donCardClothesDesc">स्वच्छ किंवा नवीन कपडे, चादरी, ब्लँकेट व उबदार कपडे.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center bg-white">
+                <div class="rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 52px; height: 52px; background: rgba(217, 119, 6, 0.1); color: #D97706;">
+                  <i class="bi bi-cart4 fs-4"></i>
+                </div>
+                <h4 class="h6 fw-bold mb-1" data-i18n="donCardGroceryTitle">किराणा व धान्य</h4>
+                <p class="small text-muted mb-0" data-i18n="donCardGroceryDesc">गहू, तांदूळ, डाळी, तेल, साखर, चहापत्ती व दैनंदिन किराणा.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3 text-center bg-white">
+                <div class="rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 52px; height: 52px; background: rgba(37, 99, 235, 0.1); color: #2563EB;">
+                  <i class="bi bi-heart-pulse-fill fs-4"></i>
+                </div>
+                <h4 class="h6 fw-bold mb-1" data-i18n="donCardMedicalTitle">औषधे व इतर साहित्य</h4>
+                <p class="small text-muted mb-0" data-i18n="donCardMedicalDesc">आरोग्य साहित्य, प्रथमोपचार, बालगृहासाठी शैक्षणिक साहित्य व उपयुक्त वस्तू.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Donation Form Container -->
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+              <div class="card border-0 shadow rounded-4 p-4 p-md-5 bg-white">
+                <div class="text-center mb-4 pb-2 border-bottom">
+                  <h3 class="h4 fw-bold text-dark mb-1" data-i18n="donFormHeading">मदत / देणगी तपशील भरा</h3>
+                  <p class="text-muted small mb-0" data-i18n="donFormSub">
+                    आपली माहिती दिल्यानंतर संस्थेचे प्रतिनिधी आपल्याशी प्रत्यक्ष संपर्क साधतील.
+                  </p>
+                </div>
+
+                <!-- Live Alert Box for Form Feedback -->
+                <div id="donationSuccessAlert" class="alert alert-success d-none rounded-3 py-3 px-4 mb-4" role="alert">
+                  <div class="d-flex align-items-start gap-3">
+                    <i class="bi bi-check-circle-fill fs-3 text-success flex-shrink-0"></i>
+                    <div>
+                      <h5 class="fw-bold mb-1" data-i18n="donSuccessTitle">नोंदणी यशस्वी!</h5>
+                      <p class="mb-0" id="donationSuccessMsgText" data-i18n="donSuccessMsg">
+                        धन्यवाद! आपल्या मदतीच्या इच्छेबद्दल धन्यवाद. संस्थेचा प्रतिनिधी आपल्याशी लवकरच संपर्क साधेल.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="donationErrorAlert" class="alert alert-danger d-none rounded-3 py-2 px-3 mb-4" role="alert">
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                  <span id="donationErrorMsgText">कृपया सर्व आवश्यक माहिती योग्य प्रकारे भरा.</span>
+                </div>
+
+                <form id="donationForm" onsubmit="handleDonationSubmit(event)" novalidate>
+                  <div class="row g-3">
+                    <!-- Full Name -->
+                    <div class="col-md-6">
+                      <label for="donorName" class="form-label fw-bold text-dark">
+                        <span data-i18n="donLblName">पूर्ण नाव</span> <span class="text-danger">*</span>
+                      </label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-person-fill"></i></span>
+                        <input
+                          type="text"
+                          class="form-control border-start-0"
+                          id="donorName"
+                          name="name"
+                          required
+                          placeholder="उदा. श्री. राहुल देशमुख"
+                          autocomplete="name"
+                        />
+                      </div>
+                      <div class="invalid-feedback d-none" id="donorNameFeedback" data-i18n="donErrName">
+                        कृपया आपले पूर्ण नाव प्रविष्ट करा.
+                      </div>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="col-md-6">
+                      <label for="donorPhone" class="form-label fw-bold text-dark">
+                        <span data-i18n="donLblPhone">मोबाईल क्रमांक</span> <span class="text-danger">*</span>
+                      </label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-telephone-fill"></i></span>
+                        <input
+                          type="tel"
+                          class="form-control border-start-0"
+                          id="donorPhone"
+                          name="phone"
+                          required
+                          placeholder="उदा. 98XXXXXXXX किंवा +91..."
+                          autocomplete="tel"
+                        />
+                      </div>
+                      <div class="invalid-feedback d-none" id="donorPhoneFeedback" data-i18n="donErrPhone">
+                        कृपया वैध १० अंकी भारतीय मोबाईल क्रमांक प्रविष्ट करा.
+                      </div>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="col-md-6">
+                      <label for="donorEmail" class="form-label fw-bold text-dark">
+                        <span data-i18n="donLblEmail">ई-मेल पत्ता</span> <span class="text-danger">*</span>
+                      </label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-envelope-fill"></i></span>
+                        <input
+                          type="email"
+                          class="form-control border-start-0"
+                          id="donorEmail"
+                          name="email"
+                          required
+                          placeholder="उदा. rahul@example.com"
+                          autocomplete="email"
+                        />
+                      </div>
+                      <div class="invalid-feedback d-none" id="donorEmailFeedback" data-i18n="donErrEmail">
+                        कृपया वैध ई-मेल पत्ता प्रविष्ट करा.
+                      </div>
+                    </div>
+
+                    <!-- Category Selector -->
+                    <div class="col-md-6">
+                      <label for="donorCategory" class="form-label fw-bold text-dark">
+                        <span data-i18n="donLblCategory">आपण काय दान करू इच्छिता? (वर्ग)</span> <span class="text-danger">*</span>
+                      </label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-tags-fill"></i></span>
+                        <select class="form-select border-start-0" id="donorCategory" name="donationCategory">
+                          <option value="अन्न" data-i18n="donCatOptFood" selected>अन्न (तयार भोजन / खाद्यपदार्थ)</option>
+                          <option value="कपडे" data-i18n="donCatOptClothes">कपडे (नवीन किंवा स्वच्छ कपडे)</option>
+                          <option value="किराणा" data-i18n="donCatOptGrocery">किराणा व धान्य (राशन साहित्य)</option>
+                          <option value="औषधे" data-i18n="donCatOptMedicines">औषधे व आरोग्य साहित्य</option>
+                          <option value="शैक्षणिक साहित्य" data-i18n="donCatOptEducation">शैक्षणिक साहित्य (बालगृहासाठी)</option>
+                          <option value="इतर" data-i18n="donCatOptOther">इतर आवश्यक उपयुक्त वस्तू</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Specific Items Details -->
+                    <div class="col-12">
+                      <label for="donorItems" class="form-label fw-bold text-dark">
+                        <span data-i18n="donLblItems">देऊ इच्छित वस्तूंचे सविस्तर वर्णन</span> <span class="text-danger">*</span>
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="donorItems"
+                        name="donationItem"
+                        rows="3"
+                        required
+                        placeholder="उदा. ५० किलो गहू, १० चादरी, किराणा सामान किंवा इतर वस्तू..."
+                      ></textarea>
+                      <div class="invalid-feedback d-none" id="donorItemsFeedback" data-i18n="donErrItems">
+                        कृपया आपण काय दान करू इच्छिता याचे तपशील प्रविष्ट करा.
+                      </div>
+                    </div>
+
+                    <!-- Optional Message -->
+                    <div class="col-12">
+                      <label for="donorMessage" class="form-label fw-bold text-dark">
+                        <span data-i18n="donLblMessage">अतिरिक्त माहिती किंवा सोयीची वेळ (ऐच्छिक)</span>
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="donorMessage"
+                        name="message"
+                        rows="2"
+                        placeholder="आपल्या सोयीची वेळ, भेट देण्याचा दिवस किंवा इतर सूचना असल्यास येथे लिहा..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 text-center mt-4">
+                      <button type="submit" class="btn-hero-primary px-5 py-3 fw-bold rounded-pill border-0 shadow-sm" id="btnDonationSubmit">
+                        <i class="bi bi-send-fill me-2"></i> <span id="btnDonationSubmitText" data-i18n="donBtnSubmit">मदतीची माहिती पाठवा</span>
+                        <span id="btnDonationSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           12. GALLERY — छायाचित्रे (6 CATEGORIES & DYNAMIC COUNTER)
+           ========================================================================== -->
+      <section id="gallery" class="section-padding section-bg-cream" aria-label="छायाचित्रे गॅलरी">
+        <div class="container">
+          <div class="text-center mb-4">
+            <div class="section-tagline">
+              <i class="bi bi-images text-success"></i> <span data-i18n="galTag">परिसर व क्षणचित्रे</span>
+            </div>
+            <h2 class="section-title text-center" id="galleryHeading" data-i18n="galTitle">छायाचित्रे</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="galSubtitle">
+              थोरल्या माँसाहेब जिजाऊ सेवा संस्थेचा परिसर, स्वच्छता, शांतता आणि आपुलकीचे वातावरण दर्शवणारी छायाचित्रे.
+            </p>
+          </div>
+
+          <!-- Gallery Top Toolbar: 6 Category Filter Buttons & Add Photo Button -->
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div class="gallery-filter-pills d-flex flex-wrap gap-2" role="tablist" aria-label="छायाचित्र वर्गवारी">
+              <button type="button" class="gallery-filter-btn active" data-filter="all" data-i18n="filterAll">सर्व</button>
+              <button type="button" class="gallery-filter-btn" data-filter="वृद्धाश्रम" data-i18n="filterAshram">आमचा आश्रम / वृद्धाश्रम</button>
+              <button type="button" class="gallery-filter-btn" data-filter="परिसर" data-i18n="filterCampus">आश्रम परिसर / परिसर</button>
+              <button type="button" class="gallery-filter-btn" data-filter="सुविधा" data-i18n="filterFacilities">आश्रमातील सुविधा</button>
+              <button type="button" class="gallery-filter-btn" data-filter="भोजन" data-i18n="filterDining">भोजन व्यवस्था</button>
+              <button type="button" class="gallery-filter-btn" data-filter="उपक्रम" data-i18n="filterPrograms">उपक्रम</button>
+              <button type="button" class="gallery-filter-btn" data-filter="क्षणचित्रे" data-i18n="filterMoments">आमच्या भेटींचे क्षण / क्षणचित्रे</button>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+              <!-- Dynamic Photo Counter -->
+              <div id="galleryPhotosCount" class="gallery-count-badge">
+                उपलब्ध छायाचित्रे: 6
+              </div>
+
+              <!-- Upload Photo Control -->
+              <label for="adminPhotoInput" class="btn btn-outline-success btn-sm rounded-pill d-inline-flex align-items-center gap-1 px-3 py-2 fw-semibold cursor-pointer shadow-sm">
+                <i class="bi bi-camera-fill"></i>
+                <span data-i18n="uploadBtnText">छायाचित्र जोडा</span>
+              </label>
+              <input type="file" id="adminPhotoInput" accept="image/*" multiple class="d-none" />
+            </div>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="gallery-grid" id="galleryGrid" aria-label="छायाचित्र ग्रिड">
+            <!-- 1. Real Main Building Photo uploaded by user -->
+            <div class="gallery-card" data-category="वृद्धाश्रम" tabindex="0" role="button" aria-label="मुख्य इमारत छायाचित्र">
+              <img src="/images/ashram-building.jpg" alt="थोरल्या माँसाहेब जिजाऊ सेवा संस्था मुख्य इमारत" loading="lazy" referrerpolicy="no-referrer" />
+              <div class="gallery-card-overlay">
+                <div>
+                  <span class="gallery-card-caption" data-i18n="galCapBuilding">मुख्य इमारत — थोरल्या माँसाहेब जिजाऊ सेवा संस्था</span>
+                </div>
+                <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              </div>
+            </div>
+
+            <!-- 2. Scenic Campus & Temple (Real Photo) -->
+            <div class="gallery-card" data-category="परिसर" tabindex="0" role="button" aria-label="आश्रम परिसर व मंदिर छायाचित्र">
+              <img
+                src="/images/IMG_20260905_134325477_HDR_PORTRAIT.jpg"
+                alt="शांत, प्रसन्न व निसर्गरम्य आश्रम परिसर आणि मंदिर"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="if (this.src.indexOf('ashram-campus.jpg') === -1 && this.src.indexOf('134325477') !== -1) { this.src='/images/ashram-campus.jpg'; } else { this.src='/images/gallery-campus.jpg'; }"
+              />
+              <div class="gallery-card-overlay">
+                <div>
+                  <span class="gallery-card-caption" data-i18n="galCapCampus">शांत, प्रसन्न व निसर्गरम्य आश्रम परिसर आणि मंदिर</span>
+                </div>
+                <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              </div>
+            </div>
+
+            <!-- 3. Dining Facility -->
+            <div class="gallery-card" data-category="सुविधा" tabindex="0" role="button" aria-label="भोजन कक्ष छायाचित्र">
+              <img src="/images/gallery-dining.jpg" alt="सात्त्विक व शुद्ध शाकाहारी भोजन व्यवस्था" loading="lazy" referrerpolicy="no-referrer" />
+              <div class="gallery-card-overlay">
+                <div>
+                  <span class="gallery-card-caption" data-i18n="galCapDining">सात्त्विक व शुद्ध शाकाहारी भोजन व्यवस्था</span>
+                </div>
+                <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              </div>
+            </div>
+
+            <!-- 4. Resident Facilities / Residential Building (Real Photo) -->
+            <div class="gallery-card" data-category="सुविधा" tabindex="0" role="button" aria-label="निवासी निवारा छायाचित्र">
+              <img
+                src="/images/IMG_20260905_133931861_HDR_PCT.jpg"
+                alt="स्वच्छ व हवेशीर निवासी निवारा — लुंकड निवास इमारत"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="if (this.src.indexOf('ashram-building.jpg') === -1) { this.src='/images/ashram-building.jpg'; } else { this.src='/images/gallery-building.jpg'; }"
+              />
+              <div class="gallery-card-overlay">
+                <div>
+                  <span class="gallery-card-caption" data-i18n="galCapFacility">स्वच्छ व हवेशीर निवासी निवारा — लुंकड निवास इमारत</span>
+                </div>
+                <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              </div>
+            </div>
+
+            <!-- 5. Balgruha Activities -->
+            <div class="gallery-card" data-category="उपक्रम" tabindex="0" role="button" aria-label="बालगृह उपक्रम छायाचित्र">
+              <img src="/images/gallery-balgruha.jpg" alt="बालगृह व मुलांसाठी सुरू केलेला उपक्रम" loading="lazy" referrerpolicy="no-referrer" />
+              <div class="gallery-card-overlay">
+                <div>
+                  <span class="gallery-card-caption" data-i18n="galCapBalgruha">बालगृह व मुलांसाठी सुरू केलेला उपक्रम</span>
+                </div>
+                <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              </div>
+            </div>
+
+            <!-- 6. Moments & Goshala Caring -->
+            <div class="gallery-card" data-category="क्षणचित्रे" tabindex="0" role="button" aria-label="आश्रम क्षणचित्रे">
+              <img src="/images/about-home.jpg" alt="गोशाळा व देशी गोवंशाचे संगोपन" loading="lazy" referrerpolicy="no-referrer" />
+              <div class="gallery-card-overlay">
+                <div>
+                  <span class="gallery-card-caption" data-i18n="galCapGoshala">गोशाळा व देशी गोवंशाचे संगोपन</span>
+                </div>
+                <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           13. FUTURE PLANNING — भविष्यातील नियोजन
+           ========================================================================== -->
+      <section id="future" class="section-padding section-bg-white" aria-label="भविष्यातील नियोजन">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-lightbulb-fill text-warning"></i> <span data-i18n="futureTag">भविष्यातील संकल्प</span>
+            </div>
+            <h2 class="section-title text-center" data-i18n="futureTitle">भविष्यातील नियोजन</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="futureSubtitle">
+              ज्येष्ठांच्या सुविधेसाठी आणि मनोरंजनासाठी संस्थेच्या प्रस्तावित भावी योजना.
+            </p>
+          </div>
+
+          <!-- Explicit Planning Disclaimer -->
+          <div class="future-notice-bar mx-auto" style="max-width: 820px;" data-i18n="futureNotice">
+            📌 हे प्रकल्प भविष्यातील नियोजनाचा भाग आहेत आणि संस्थेच्या पुढील टप्प्यात साकारले जाणार आहेत.
+          </div>
+
+          <div class="row g-4">
+            <!-- 1. Mini Theater -->
+            <div class="col-md-6">
+              <div class="future-card">
+                <span class="future-badge" data-i18n="futureBadge">प्रस्तावित योजना (Upcoming Initiatives)</span>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="quick-icon-wrap" style="background-color: #FEF3C7; color: #B45309;">
+                    <i class="bi bi-film fs-2"></i>
+                  </div>
+                  <h3 class="h4 fw-bold mb-0 text-dark" data-i18n="future1Title">🎬 वृद्धांच्या मनोरंजनासाठी मिनी थिएटर</h3>
+                </div>
+                <p class="text-muted fs-5 mb-0" data-i18n="future1Desc">
+                  ज्येष्ठ नागरिकांच्या विरंगुळ्यासाठी भजन, जुने चित्रपट, धार्मिक मालिका आणि माहितीपट पाहण्यासाठी सुसज्ज मिनी थिएटरची योजना प्रस्तावित आहे.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. Community Hall -->
+            <div class="col-md-6">
+              <div class="future-card">
+                <span class="future-badge" data-i18n="futureBadge">प्रस्तावित योजना (Upcoming Initiatives)</span>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="quick-icon-wrap" style="background-color: #E8F1EC; color: #1B4332;">
+                    <i class="bi bi-building fs-2"></i>
+                  </div>
+                  <h3 class="h4 fw-bold mb-0 text-dark" data-i18n="future2Title">🏛️ कम्युनिटी हॉल</h3>
+                </div>
+                <p class="text-muted fs-5 mb-0" data-i18n="future2Desc">
+                  सामाजिक कार्यक्रम, प्रवचने, आरोग्य शिबिरे आणि कौटुंबिक स्नेहमेळावे आयोजित करण्यासाठी प्रशस्त कम्युनिटी हॉलचे नियोजन आहे.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           14. SANSTHA — संस्था चालक व संचालक मंडळ (BOARD MEMBERS)
+           ========================================================================== -->
+      <section id="sanstha" class="section-padding section-bg-cream" aria-label="संस्था व संचालक मंडळ">
+        <!-- Anchor alias for legacy links -->
+        <div id="leadership" style="position: relative; top: -100px;"></div>
+
+        <div class="container">
+          <!-- Sanstha Subsection Navigation Tabs -->
+          <div class="sanstha-subnav" role="tablist">
+            <button type="button" class="sanstha-tab-btn active" id="tabSansthaBoardBtn" onclick="switchSansthaTab('board')" role="tab" aria-selected="true">
+              <i class="bi bi-people-fill"></i> <span data-i18n="sansthaTabBoard">संचालक मंडळ (१४ सदस्य)</span>
+            </button>
+            <button type="button" class="sanstha-tab-btn" id="tabSansthaLeadBtn" onclick="switchSansthaTab('lead')" role="tab" aria-selected="false">
+              <i class="bi bi-person-fill"></i> <span data-i18n="sansthaTabHead">संस्था चालक / व्यवस्थापक</span>
+            </button>
+          </div>
+
+          <!-- SUBSECTION 1: SANSTHA CHALAK (LEADERSHIP) -->
+          <div id="sansthaLeadPane" class="d-none">
+            <div class="text-center mb-5">
+              <div class="section-tagline">
+                <i class="bi bi-person-badge-fill text-success"></i> <span data-i18n="leadTag">संस्थेचे मार्गदर्शक</span>
+              </div>
+              <h2 class="section-title text-center" data-i18n="leadTitle">संस्था चालक</h2>
+              <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="leadSubtitle">
+                थोरल्या माँसाहेब जिजाऊ सेवा संस्थेचे समर्पित नेतृत्व आणि व्यवस्थापन.
+              </p>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-9">
+                <div class="leadership-card-main">
+                  <div class="row align-items-center g-4">
+                    <div class="col-md-4 text-center">
+                      <div class="leadership-avatar-wrap mx-auto">
+                        <i class="bi bi-person-fill"></i>
+                      </div>
+                      <span class="leadership-badge" data-i18n="leadRole">व्यवस्थापक / संस्था चालक</span>
+                    </div>
+
+                    <div class="col-md-8">
+                      <h3 class="h2 fw-bold text-dark mb-1" data-i18n="leadName">श्री. राजेंद्र चोपडा</h3>
+                      <p class="text-muted fw-semibold mb-3" data-i18n="leadSanstha">थोरल्या माँसाहेब जिजाऊ सेवा संस्था, नाशिक</p>
+
+                      <p class="fs-5 text-muted mb-3" style="line-height: 1.8;" data-i18n="leadDesc">
+                        गेल्या अनेक वर्षांपासून ज्येष्ठ नागरिकांची सेवा, बालगृहातील मुलांचे संगोपन आणि गोशाळेची काळजी घेण्याचे पवित्र कार्य श्री. राजेंद्र चोपडा यांच्या मार्गदर्शनाखाली सातत्याने सुरू आहे. “सेवा हीच ईश्वरसेवा” हा संस्थेचा मूळ मंत्र आहे.
+                      </p>
+
+                      <!-- Contact Numbers of Sanstha Chalak -->
+                      <div class="leadership-phones-box">
+                        <a href="tel:+918530333119" class="leadership-phone-pill">
+                          <i class="bi bi-telephone-fill text-success"></i> +91 85303 33119
+                        </a>
+                        <a href="tel:+919422944800" class="leadership-phone-pill">
+                          <i class="bi bi-telephone-fill text-primary"></i> +91 94229 44800
+                        </a>
+                      </div>
+
+                      <div class="leadership-quote-box mb-3">
+                        <p data-i18n="leadQuote">“आपल्या ज्येष्ठांच्या चेहऱ्यावरील समाधान आणि निराधार बालकांच्या डोळ्यांतील विश्वास हीच आमची खरी संपत्ती आहे.”</p>
+                      </div>
+
+                      <div>
+                        <button type="button" class="btn btn-outline-success btn-sm rounded-pill px-3" onclick="switchSansthaTab('board')">
+                          <i class="bi bi-people-fill me-1"></i> <span data-i18n="sansthaTabBoard">संचालक मंडळ (१४ सदस्य) पहा</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBSECTION 2: BOARD OF TRUSTEES (संचालक मंडळ — 14 BOARD MEMBERS) -->
+          <div id="sansthaBoardPane">
+            <div class="text-center mb-4">
+              <div class="section-tagline">
+                <i class="bi bi-shield-check text-success"></i> <span data-i18n="boardTag">विश्वस्त व मार्गदर्शक मंडळ</span>
+              </div>
+              <h2 class="section-title text-center" data-i18n="boardTitle">संचालक मंडळ</h2>
+              <p class="text-muted mx-auto mb-3" style="max-width: 680px; font-size: 1.15rem;" data-i18n="boardSubtitle">
+                थोरल्या माँसाहेब जिजाऊ सेवा संस्थेचे सन्माननीय संचालक व विश्वस्त मंडळ.
+              </p>
+              <div>
+                <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-2 fs-6 border border-success border-opacity-25">
+                  <i class="bi bi-award-fill me-1"></i> <span data-i18n="boardCountBadge">एकूण संचालक सदस्य: १४</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Leadership quick banner -->
+            <div class="sanstha-lead-quick-bar text-center mb-4">
+              <div class="d-inline-flex flex-wrap align-items-center justify-content-center gap-2 py-2 px-3 rounded-pill bg-white border shadow-sm">
+                <span class="text-muted small fw-semibold"><i class="bi bi-person-badge text-success me-1"></i> <span data-i18n="leadRole">व्यवस्थापक / संस्था चालक</span>:</span>
+                <strong class="text-dark" data-i18n="leadName">श्री. राजेंद्र चोपडा</strong>
+                <a href="tel:+918530333119" class="badge bg-success text-white text-decoration-none px-2 py-1"><i class="bi bi-telephone-fill"></i> +91 85303 33119</a>
+                <button type="button" class="btn btn-link btn-sm text-decoration-none p-0 ms-1 fw-bold text-success" onclick="switchSansthaTab('lead')">अधिक माहिती →</button>
+              </div>
+            </div>
+
+            <!-- Responsive Card/Grid Layout for 14 Organization Members (Rendered Dynamically via JS) -->
+            <div class="row g-3 g-md-4" id="boardMembersContainer" aria-live="polite">
+              <!-- Dynamically populated from organizationMembers array in js/script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           15. CONTACT — संपर्क 📞
+           ========================================================================== -->
+      <section id="contact" class="section-padding section-bg-white" aria-label="आमच्याशी संपर्क साधा">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-tagline">
+              <i class="bi bi-telephone-inbound-fill text-success"></i> <span data-i18n="contactTag">संवाद व मार्गदर्शन</span>
+            </div>
+            <h2 class="section-title text-center" id="contactHeading" data-i18n="contactTitle">आमच्याशी संपर्क साधा</h2>
+            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 1.15rem;" data-i18n="contactSubtitle">
+              थोरल्या माँसाहेब जिजाऊ सेवा संस्थेबद्दल अधिक माहितीसाठी किंवा प्रत्यक्ष भेट देण्यासाठी आपण खालील क्रमांकावर संपर्क करू शकता.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-stretch">
+            <!-- Contact Card -->
+            <div class="col-lg-6">
+              <div class="contact-card-main" id="contactMainCard">
+                <div class="contact-reg-banner" data-i18n="cRegVal">
+                  रजि. एफ-3983 नाशिक | स्थापना: १८-१-१९९६
+                </div>
+
+                <div class="contact-badge-manager">
+                  <i class="bi bi-person-check-fill"></i> <span data-i18n="cBadgeMgr">व्यवस्थापक / संस्था चालक</span>
+                </div>
+                <h3 class="contact-manager-name" data-i18n="cMgrName">श्री. राजेंद्र चोपडा</h3>
+                <p class="text-muted mb-3" data-i18n="cMgrSub">थोरल्या माँसाहेब जिजाऊ सेवा संस्था</p>
+
+                <!-- Dual Phone Numbers -->
+                <div class="contact-dual-phones">
+                  <a href="tel:+918530333119" class="contact-phone-large" id="contactPhoneLink1">
+                    <i class="bi bi-telephone-fill me-2"></i> +91 85303 33119
+                  </a>
+                  <a href="tel:+919422944800" class="contact-phone-alt" id="contactPhoneLink2">
+                    <i class="bi bi-telephone-fill text-success me-2"></i> +91 94229 44800
+                  </a>
+                </div>
+
+                <ul class="contact-info-list">
+                  <li>
+                    <div class="contact-info-icon" aria-hidden="true">
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block text-dark" data-i18n="cAddressMarathiLabel">पत्ता (Marathi):</strong>
+                      <span data-i18n="cAddressMarathiVal">रोड, सामनगाव, एकलहरे, नाशिक, महाराष्ट्र – ४२२१०१</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contact-info-icon" aria-hidden="true">
+                      <i class="bi bi-geo-fill"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block text-dark" data-i18n="cAddressEnglishLabel">Address (English):</strong>
+                      <span data-i18n="cAddressEnglishVal">Road, Samangaon, Eklahare, Nashik, Maharashtra – 422101</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="contact-info-icon" aria-hidden="true">
+                      <i class="bi bi-clock-fill"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block text-dark" data-i18n="cTimingLabel">वेळ:</strong>
+                      <span data-i18n="cTimingVal">संध्याकाळी ८ वाजेपर्यंत (नियमित कार्यालयीन वेळ)</span>
+                    </div>
+                  </li>
+                </ul>
+
+                <!-- Action Buttons: Call 1, Call 2, WhatsApp, Google Maps -->
+                <div class="contact-actions-grid">
+                  <a href="tel:+918530333119" class="btn-contact-call" id="btnCallNow">
+                    <i class="bi bi-telephone-fill"></i> <span data-i18n="cBtnCall">कॉल करा</span>
+                  </a>
+                  <a href="tel:+919422944800" class="btn btn-outline-success fw-bold rounded-pill d-flex align-items-center justify-content-center gap-2" id="btnCallAlt">
+                    <i class="bi bi-telephone-fill"></i> <span data-i18n="cBtnCallAlt">पर्यायी नंबर</span>
+                  </a>
+                  <a
+                    href="https://wa.me/918530333119"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-contact-whatsapp"
+                    id="btnWhatsappNow"
+                  >
+                    <i class="bi bi-whatsapp"></i> <span data-i18n="cBtnWa">WhatsApp</span>
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Samangaon,+Eklahare,+Nashik,+Maharashtra+422101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-contact-maps"
+                    id="btnMapsNow"
+                  >
+                    <i class="bi bi-geo-alt-fill"></i> <span data-i18n="cBtnMaps">Google Maps</span>
+                  </a>
+                </div>
+
+                <!-- Google Rating -->
+                <div class="google-rating-card" id="googleRatingCard">
+                  <div>
+                    <div class="rating-stars" aria-label="४.९ स्टार">
+                      ★ ★ ★ ★ ★
+                    </div>
+                    <div class="small text-muted mt-1" data-i18n="cRatingPublic">Google वरील सार्वजनिक रेटिंग</div>
+                  </div>
+                  <div class="text-end">
+                    <div class="rating-score" data-i18n="cRatingScore">४.९ ⭐</div>
+                    <div class="small text-muted" data-i18n="cRatingReviews">७ पुनरावलोकने</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Map Embed Column -->
+            <div class="col-lg-6">
+              <div class="map-container" id="mapContainer">
+                <iframe
+                  title="थोरल्या माँसाहेब जिजाऊ सेवा संस्था सामनगाव नाशिक नकाशा"
+                  src="https://maps.google.com/maps?q=Samangaon,+Eklahare,+Nashik,+Maharashtra+422101&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  aria-label="गुगल नकाशा स्थान"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer-matoshri" aria-label="तळटीप माहिती">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <img src="/images/logo.jpg" alt="बोधचिन्ह" width="44" height="44" class="rounded-circle" style="border: 2px solid var(--color-gold); object-fit: cover;" />
+              <h4 class="h4 fw-bold text-white mb-0" data-i18n="footerBrandMain">थोरल्या माँसाहेब जिजाऊ सेवा संस्था</h4>
+            </div>
+            <p class="text-gold fw-medium mb-2" data-i18n="footerBrandSub">Thoralya Mansaheb Jijau Seva Sanstha</p>
+            <p class="small text-warning mb-3" data-i18n="footerRegVal">रजि. एफ-3983 नाशिक • स्थापना: 18-1-1996</p>
+            <p class="text-light opacity-75 fs-5 mb-3" style="max-width: 440px; line-height: 1.7;" data-i18n="footerAbout">
+              ज्येष्ठ नागरिकांसाठी प्रेम, माया, आपुलकी आणि आधार. वृद्धाश्रम, बालगृह व गोशाळेची अखंड सेवा.
+            </p>
+            <p class="small text-light opacity-50 mb-0" data-i18n="footerTagline">
+              “आपुलकीच्या सावलीत, सन्मानाने जगण्याची एक सुंदर जागा.”
+            </p>
+          </div>
+
+          <div class="col-lg-4">
+            <h5 class="h5 fw-bold text-white mb-3" data-i18n="footerMgrLabel">संस्था चालक:</h5>
+            <p class="mb-2">
+              <span class="text-white fs-5 fw-bold" data-i18n="footerMgrName">श्री. राजेंद्र चोपडा</span>
+            </p>
+            <p class="mb-2">
+              <strong class="text-white" data-i18n="footerPhoneLabel">मोबाईल:</strong>
+              <a href="tel:+918530333119" class="text-gold fw-bold">+91 85303 33119</a> | 
+              <a href="tel:+919422944800" class="text-gold fw-bold">+91 94229 44800</a>
+            </p>
+            <p class="mb-0 text-light opacity-75">
+              <strong class="text-white" data-i18n="footerAddressLabel">पत्ता:</strong> Road, Samangaon, Eklahare, Nashik, Maharashtra – 422101
+            </p>
+          </div>
+
+          <div class="col-lg-3">
+            <h5 class="h5 fw-bold text-white mb-3" data-i18n="footerQuickLinksHeading">द्रुत दुवे</h5>
+            <ul class="footer-nav-list flex-column gap-2">
+              <li><a href="#home" data-i18n="navHome">मुखपृष्ठ</a></li>
+              <li><a href="#about" data-i18n="navAbout">आमच्याबद्दल</a></li>
+              <li><a href="#wings" data-i18n="navWings">सेवेची तीन दालने</a></li>
+              <li><a href="#work" data-i18n="navWork">आमचे कार्य</a></li>
+              <li><a href="#facilities" data-i18n="navFacilities">सुविधा</a></li>
+              <li><a href="#routine" data-i18n="navRoutine">दिनचर्या</a></li>
+              <li><a href="#programs" data-i18n="navPrograms">कार्यक्रम</a></li>
+              <li><a href="#community" data-i18n="navCommunity">समाजाचा सहभाग</a></li>
+              <li><a href="#gallery" data-i18n="navGallery">छायाचित्रे</a></li>
+              <li><a href="#future" data-i18n="navFuture">भविष्यातील नियोजन</a></li>
+              <li><a href="#sanstha" data-i18n="navSanstha">संस्था व संचालक</a></li>
+              <li><a href="#contact" data-i18n="navContact">संपर्क</a></li>
+              <li><a href="/admin" target="_blank" class="text-warning fw-bold"><i class="bi bi-shield-lock-fill me-1"></i><span data-i18n="navAdmin">अ‍ॅडमिन लॉगिन</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-divider">
+          <p class="mb-0" data-i18n="footerCopyright">
+            © 2026 थोरल्या माँसाहेब जिजाऊ सेवा संस्था, सामनगाव, नाशिक. सर्व हक्क राखीव.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         INTERACTIVE LIGHTBOX MODAL
+         ========================================================================== -->
+    <div id="galleryLightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="छायाचित्र दर्शक">
+      <div class="lightbox-container">
+        <button id="lightboxClose" class="lightbox-btn-close" aria-label="बंद करा">&times;</button>
+        <button id="lightboxPrev" class="lightbox-btn-prev" aria-label="मागील छायाचित्र">&#10094;</button>
+        <button id="lightboxNext" class="lightbox-btn-next" aria-label="पुढील छायाचित्र">&#10095;</button>
+
+        <div class="lightbox-img-wrap">
+          <img id="lightboxImg" src="" alt="थोरल्या माँसाहेब जिजाऊ सेवा संस्था छायाचित्र" referrerpolicy="no-referrer" />
+          <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         THREE WINGS OF SERVICE DETAIL MODAL (सेवेची तीन दालने सविस्तर माहिती)
+         ========================================================================== -->
+    <div class="modal fade" id="wingsDetailModal" tabindex="-1" aria-labelledby="wingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4 border-0 shadow-lg">
+          <div class="modal-header bg-dark text-white rounded-top-4 py-3 px-4" style="background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)) !important;">
+            <h5 class="modal-title fw-bold" id="wingsModalLabel" data-i18n="wingModalTitle">सेवेची दालने — सविस्तर माहिती</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <!-- Elderly wing -->
+            <div id="modalWingElderly" class="p-3 rounded-3 mb-3 bg-light">
+              <h5 class="fw-bold text-success mb-2" data-i18n="wingModalElderlyTitle">वृद्धाश्रम सेवा:</h5>
+              <p class="mb-0 text-muted fs-6" data-i18n="wingModalElderlyDesc">
+                संस्थेच्या वृद्धाश्रमात ज्येष्ठ नागरिकांना संपूर्ण सुरक्षितता, वैद्यकीय काळजी, सात्त्विक शाकाहारी भोजन, दैनंदिन दिनचर्या आणि आपुलकीचा सहवास मिळतो. ज्येष्ठांना एकटेपणा जाणवू नये यासाठी विविध उपक्रम राबवले जातात.
+              </p>
+            </div>
+
+            <!-- Balgruha wing -->
+            <div id="modalWingChild" class="p-3 rounded-3 mb-3 bg-light">
+              <h5 class="fw-bold text-primary mb-2" data-i18n="wingModalChildTitle">बालगृह उपक्रम:</h5>
+              <p class="mb-2 text-muted fs-6" data-i18n="wingModalChildDesc">
+                संस्थेचा बालगृह उपक्रम हा बालकांच्या उज्ज्वल भविष्यासाठी आणि सुरक्षित आधारासाठी सुरू करण्यात आला आहे. सर्वात महत्त्वाचे म्हणजे या बालगृहाचा संपूर्ण खर्च संस्था चालक स्वखर्चाने करत आहेत.
+              </p>
+              <div class="badge bg-warning text-dark py-2 px-3 fw-bold" data-i18n="wing2SelfFundNotice">
+                विशेष नोंद: बालगृहाचा खर्च स्वखर्चाने करतात.
+              </div>
+            </div>
+
+            <!-- Goshala wing -->
+            <div id="modalWingGoshala" class="p-3 rounded-3 bg-light">
+              <h5 class="fw-bold text-success mb-2" data-i18n="wingModalGoshalaTitle">गोशाळा उपक्रम:</h5>
+              <p class="mb-0 text-muted fs-6" data-i18n="wingModalGoshalaDesc">
+                गोवंशाचे रक्षण व संवर्धन व्हावे या हेतूने गोशाळेची स्थापना करण्यात आली आहे. येथे गाईंची नियमित स्वच्छता, चारा, वैद्यकीय तपासणी व प्रेमाने संगोपन केले जाते.
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer border-0 p-3">
+            <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal" data-i18n="modalCloseBtn">बंद करा</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container for Upload Status -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+      <div id="photoActionToast" class="toast align-items-center text-bg-dark border-0 rounded-4 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body d-flex align-items-center gap-2 py-3 px-3">
+            <i class="bi bi-info-circle-fill text-warning fs-5"></i>
+            <span id="photoToastMessage" class="fw-medium"></span>
+          </div>
+          <button type="button" class="btn-close btn-close-white me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions-container" aria-label="द्रुत कृती बटणे">
+      <!-- WhatsApp Floating Button -->
+      <a
+        href="https://wa.me/918530333119"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-floating-whatsapp"
+        title="WhatsApp वर संदेश पाठवा"
+        aria-label="WhatsApp वर थेट संपर्क"
+        id="btnFloatingWhatsapp"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
+
+      <!-- Back to Top Button -->
+      <button
+        id="btnBackToTop"
+        class="btn-back-to-top"
+        title="पृष्ठाच्या सुरुवातीला जा"
+        aria-label="पृष्ठाच्या सुरुवातीला जा"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Language Translation Dictionary -->
+    <script src="/js/translations.js"></script>
+
+    <!-- Custom Vanilla JavaScript -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="mr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>अ‍ॅडमिन पोर्टल — थोरल्या माँसाहेब जिजाऊ सेवा संस्था</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Custom Admin Styles -->
+    <link rel="stylesheet" href="/css/admin.css" />
+    <style>
+      body {
+        font-family: 'Mukta', 'Plus Jakarta Sans', system-ui, sans-serif;
+      }
+      .badge-req {
+        color: #DC2626;
+      }
+    </style>
+  </head>
+  <body class="admin-shell">
+    <!-- Admin Top Navbar -->
+    <nav class="admin-navbar">
+      <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <a href="/admin" class="admin-brand">
+          <img src="/images/logo.jpg" alt="थोरल्या माँसाहेब जिजाऊ सेवा संस्था" style="object-fit: cover;" />
+          <div class="admin-brand-text">
+            <h1 data-admin-i18n="portalBrandTitle">थोरल्या माँसाहेब जिजाऊ सेवा संस्था</h1>
+            <span data-admin-i18n="portalBrandSub">सुरक्षित व्यवस्थापन व अ‍ॅडमिन पोर्टल (Admin Portal)</span>
+          </div>
+        </a>
+
+        <div class="d-flex align-items-center gap-3">
+          <!-- Language Switcher in Admin -->
+          <div class="btn-group btn-group-sm" role="group" aria-label="Language">
+            <button type="button" class="btn btn-outline-light active" id="btnAdminLangMr" onclick="setAdminLanguage('mr')">मराठी</button>
+            <button type="button" class="btn btn-outline-light" id="btnAdminLangEn" onclick="setAdminLanguage('en')">English</button>
+          </div>
+
+          <!-- Public Website Link -->
+          <a href="/" class="btn btn-sm btn-outline-light d-flex align-items-center gap-1">
+            <i class="bi bi-box-arrow-up-right"></i>
+            <span data-admin-i18n="btnPublicSite">मुख्य संकेतस्थळ</span>
+          </a>
+
+          <!-- User session pill & Logout (hidden when not logged in) -->
+          <div id="adminUserPill" class="d-none d-flex align-items-center gap-2">
+            <span class="badge bg-light text-dark fw-bold px-3 py-2" id="adminUserLabel">
+              <i class="bi bi-person-circle me-1"></i> <span id="adminUserName">Admin</span>
+            </span>
+            <button class="btn btn-sm btn-danger d-flex align-items-center gap-1" onclick="handleAdminLogout()">
+              <i class="bi bi-box-arrow-right"></i>
+              <span data-admin-i18n="btnLogout">लॉगआउट</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Notification Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+      <div id="adminToast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body" id="adminToastMsg">संदेश</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT VIEW: LOGIN OR DASHBOARD -->
+    <main class="flex-grow-1 d-flex flex-column" id="adminMainArea">
+      
+      <!-- ==============================================================
+           VIEW 1: ADMIN LOGIN VIEW
+           ============================================================== -->
+      <div id="viewLogin" class="admin-login-wrapper">
+        <div class="admin-login-card">
+          <div class="admin-login-header">
+            <div class="mb-2">
+              <i class="bi bi-shield-lock-fill fs-1 text-warning"></i>
+            </div>
+            <h2 data-admin-i18n="loginHeading">अ‍ॅडमिन लॉगिन (Admin Sign In)</h2>
+            <p class="mb-0 text-light opacity-75" data-admin-i18n="loginSub">केवळ अधिकृत सुपर अ‍ॅडमिन व संस्था व्यवस्थापकांसाठी</p>
+          </div>
+
+          <div class="admin-login-body">
+            <!-- Setup Notice if needed -->
+            <div id="setupAlert" class="alert alert-info d-none mb-3">
+              <div class="fw-bold mb-1"><i class="bi bi-info-circle-fill me-1"></i> <span data-admin-i18n="setupTitle">प्रथम सुपर अ‍ॅडमिन नोंदणी</span></div>
+              <small data-admin-i18n="setupDesc">संस्थेसाठी पहिले सुपर अ‍ॅडमिन खाते तयार करा. एकदा तयार झाल्यावर हे खाते सुरक्षित राहील.</small>
+            </div>
+
+            <form id="adminLoginForm" onsubmit="handleAdminLogin(event)">
+              <div class="mb-3">
+                <label for="loginId" class="form-label fw-bold" data-admin-i18n="lblLoginId">वापरकर्ता नाव किंवा ईमेल (Username / Email)</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" id="loginId" placeholder="admin किंवा manager" required autocomplete="username" />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label fw-bold" data-admin-i18n="lblPassword">पासवर्ड (Password)</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-key"></i></span>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="पासवर्ड प्रविष्ट करा" required autocomplete="current-password" />
+                  <button type="button" class="btn btn-outline-secondary" onclick="togglePasswordVisibility('loginPassword', 'eyeIcon')">
+                    <i class="bi bi-eye" id="eyeIcon"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Setup mode fields (visible only when system needs initial setup) -->
+              <div id="setupExtraFields" class="d-none">
+                <div class="mb-3">
+                  <label for="setupName" class="form-label fw-bold" data-admin-i18n="lblFullName">पूर्ण नाव (Full Name)</label>
+                  <input type="text" class="form-control" id="setupName" placeholder="उदा. श्री. राजेंद्र चोपडा / संस्था प्रमुख" />
+                </div>
+              </div>
+
+              <div id="loginErrorAlert" class="alert alert-danger d-none py-2 px-3 small mb-3">
+                <i class="bi bi-exclamation-triangle-fill me-1"></i> <span id="loginErrorText">त्रुटी</span>
+              </div>
+
+              <button type="submit" class="btn btn-success w-full py-2 fw-bold w-100" id="btnLoginSubmit">
+                <span id="btnLoginText" data-admin-i18n="btnLogin">लॉगिन करा (Sign In)</span>
+                <span id="btnLoginSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status"></span>
+              </button>
+            </form>
+
+            <!-- Quick Testing Helper Credentials Box -->
+            <div class="mt-4 pt-3 border-top text-muted small bg-light p-3 rounded-3">
+              <div class="fw-bold mb-2 text-dark"><i class="bi bi-key-fill text-success me-1"></i> <span data-admin-i18n="helpCredsTitle">चाचणीसाठी अधिकृत खाती (Official Accounts):</span></div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span><strong>Super Admin:</strong> <code>admin</code> / <code>Admin@Jijau2026</code></span>
+                <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="fillTestCreds('admin', 'Admin@Jijau2026')">Auto Fill</button>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><strong>Manager:</strong> <code>manager</code> / <code>Manager@Jijau2026</code></span>
+                <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="fillTestCreds('manager', 'Manager@Jijau2026')">Auto Fill</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==============================================================
+           VIEW 2: AUTHENTICATED ADMIN DASHBOARD
+           ============================================================== -->
+      <div id="viewDashboard" class="admin-dashboard-container d-none">
+        
+        <!-- Welcome Header & Role Notice -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <div>
+            <h2 class="h3 fw-bold text-dark mb-1">
+              <span data-admin-i18n="welcomeLabel">स्वागत आहे,</span> <span id="dashUserGreeting" class="text-success">...</span>
+            </h2>
+            <div class="d-flex align-items-center gap-2">
+              <span id="dashRoleBadge" class="role-badge-super">
+                <i class="bi bi-shield-check"></i> <span id="dashRoleText">SUPER ADMIN</span>
+              </span>
+              <span class="text-muted small" id="dashRoleDesc">सर्व विभागांचे पूर्ण अधिकार</span>
+            </div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button class="btn btn-success" onclick="openAddEventModal()">
+              <i class="bi bi-calendar-plus me-1"></i> <span data-admin-i18n="btnAddNewEvent">नवीन कार्यक्रम जोडा</span>
+            </button>
+            <a href="/" target="_blank" class="btn btn-outline-dark">
+              <i class="bi bi-globe me-1"></i> <span data-admin-i18n="btnViewLiveSite">थेट संकेतस्थळ पाहा</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Stat Cards Row -->
+        <div class="row g-3 mb-4">
+          <!-- Upcoming Events Count -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon bg-warning bg-opacity-15 text-warning">
+                <i class="bi bi-calendar-event-fill"></i>
+              </div>
+              <div>
+                <div class="admin-stat-number" id="statEventsCount">0</div>
+                <p class="admin-stat-label" data-admin-i18n="statEventsLabel">सक्रिय आगामी कार्यक्रम</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Board Members Count (Visible to Super Admin) -->
+          <div class="col-sm-6 col-lg-3" id="statCardBoardMembers">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon bg-success bg-opacity-15 text-success">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div>
+                <div class="admin-stat-number">14</div>
+                <p class="admin-stat-label" data-admin-i18n="statBoardLabel">संचालक मंडळ सदस्य</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Photos Count -->
+          <div class="col-sm-6 col-lg-3" id="statCardGallery">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon bg-info bg-opacity-15 text-info">
+                <i class="bi bi-images"></i>
+              </div>
+              <div>
+                <div class="admin-stat-number" id="statGalleryCount">6</div>
+                <p class="admin-stat-label" data-admin-i18n="statGalleryLabel">गॅलरी छायाचित्रे</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Managers Count (Visible to Super Admin) -->
+          <div class="col-sm-6 col-lg-3" id="statCardManagers">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon bg-primary bg-opacity-15 text-primary">
+                <i class="bi bi-person-badge-fill"></i>
+              </div>
+              <div>
+                <div class="admin-stat-number" id="statManagersCount">1</div>
+                <p class="admin-stat-label" data-admin-i18n="statManagersLabel">व्यवस्थापक व कर्मचारी खाती</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Donation / Support Requests Count -->
+          <div class="col-sm-6 col-lg-3" id="statCardDonations">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon bg-danger bg-opacity-15 text-danger">
+                <i class="bi bi-box2-heart-fill"></i>
+              </div>
+              <div>
+                <div class="admin-stat-number" id="statDonationsCount">0</div>
+                <p class="admin-stat-label" data-admin-i18n="statDonationsLabel">मदत / देणगी विनंत्या</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Tabs Navigation -->
+        <div class="admin-tab-nav" role="tablist">
+          <button class="admin-tab-btn active" id="tabBtnEvents" onclick="switchDashboardTab('events')">
+            <i class="bi bi-calendar3"></i> <span data-admin-i18n="tabEvents">आगामी कार्यक्रम व्यवस्थापन</span>
+          </button>
+          <button class="admin-tab-btn" id="tabBtnDonations" onclick="switchDashboardTab('donations')">
+            <i class="bi bi-box2-heart"></i> <span data-admin-i18n="tabDonations">मदत व देणगी विनंत्या</span>
+          </button>
+          <button class="admin-tab-btn" id="tabBtnBoard" onclick="switchDashboardTab('board')">
+            <i class="bi bi-person-lines-fill"></i> <span data-admin-i18n="tabBoard">संचालक मंडळ छायाचित्रे</span>
+          </button>
+          <button class="admin-tab-btn" id="tabBtnGallery" onclick="switchDashboardTab('gallery')">
+            <i class="bi bi-images"></i> <span data-admin-i18n="tabGallery">छायाचित्रे व्यवस्थापन (गॅलरी)</span>
+          </button>
+          <button class="admin-tab-btn" id="tabBtnUsers" onclick="switchDashboardTab('users')">
+            <i class="bi bi-person-gear"></i> <span data-admin-i18n="tabUsers">व्यवस्थापक खाती (RBAC)</span>
+          </button>
+        </div>
+
+        <!-- ==========================================
+             TAB 1: UPCOMING EVENTS MANAGEMENT (Both roles)
+             ========================================== -->
+        <div id="tabContentEvents" class="admin-content-card">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h3 class="h4 fw-bold text-dark mb-1" data-admin-i18n="eventsManageHeading">आगामी कार्यक्रम व्यवस्थापन</h3>
+              <p class="text-muted small mb-0" data-admin-i18n="eventsManageSub">
+                येथे जोडलेले कार्यक्रम थेट मुख्य संकेतस्थळावर प्रसिद्ध होतात. कार्यक्रम हटवल्यास संकेतस्थळावरून तात्काळ निघून जातो.
+              </p>
+            </div>
+            <button class="btn btn-success" onclick="openAddEventModal()">
+              <i class="bi bi-plus-circle me-1"></i> <span data-admin-i18n="btnAddEvent">नवीन कार्यक्रम जोडा</span>
+            </button>
+          </div>
+
+          <!-- Empty Events State -->
+          <div id="eventsEmptyState" class="text-center py-5 border rounded-3 bg-light d-none">
+            <div class="text-muted mb-3 fs-1"><i class="bi bi-calendar-x"></i></div>
+            <h4 class="h5 fw-bold text-dark mb-1" data-admin-i18n="noEventsAdmin">सध्या कोणतेही आगामी कार्यक्रम नाहीत.</h4>
+            <p class="text-muted small mb-3" data-admin-i18n="noEventsAdminSub">नवीन कार्यक्रम जोडण्यासाठी वरील 'नवीन कार्यक्रम जोडा' बटणावर क्लिक करा.</p>
+            <button class="btn btn-sm btn-outline-success" onclick="openAddEventModal()">
+              <i class="bi bi-plus me-1"></i> <span data-admin-i18n="btnAddFirstEvent">पहिला कार्यक्रम जोडा</span>
+            </button>
+          </div>
+
+          <!-- Events Table -->
+          <div class="table-responsive" id="eventsTableWrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="width: 80px;" data-admin-i18n="thPhoto">छायाचित्र</th>
+                  <th data-admin-i18n="thTitle">कार्यक्रमाचे नाव (मराठी व English)</th>
+                  <th style="width: 140px;" data-admin-i18n="thDate">दिनांक</th>
+                  <th style="width: 110px;" data-admin-i18n="thTime">वेळ</th>
+                  <th data-admin-i18n="thLocation">स्थान</th>
+                  <th style="width: 160px; text-align: right;" data-admin-i18n="thActions">क्रिया (Actions)</th>
+                </tr>
+              </thead>
+              <tbody id="eventsTableBody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 2: BOARD MEMBERS (Super Admin only)
+             ========================================== -->
+        <div id="tabContentBoard" class="admin-content-card d-none">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h3 class="h4 fw-bold text-dark mb-1" data-admin-i18n="boardManageHeading">संचालक मंडळ व्यवस्थापन (14 संचालक सदस्य)</h3>
+              <p class="text-muted small mb-0" data-admin-i18n="boardManageSub">
+                अधिकृत १४ संचालक सदस्यांचे तपशील व छायाचित्रे. छायाचित्र उपलब्ध झाल्यावर 'छायाचित्र बदला' बटण वापरून थेट अपलोड करा.
+              </p>
+            </div>
+            <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-2">
+              <i class="bi bi-shield-lock-fill me-1"></i> <span data-admin-i18n="superAdminOnly">सुपर अ‍ॅडमिन अधिकार</span>
+            </span>
+          </div>
+
+          <div class="row g-3" id="adminBoardMembersGrid">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 3: USER MANAGEMENT / RBAC (Super Admin only)
+             ========================================== -->
+        <div id="tabContentUsers" class="admin-content-card d-none">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h3 class="h4 fw-bold text-dark mb-1" data-admin-i18n="usersManageHeading">व्यवस्थापक व कर्मचारी खाती (Role-Based Access Control)</h3>
+              <p class="text-muted small mb-0" data-admin-i18n="usersManageSub">
+                सुपर अ‍ॅडमिन पूर्ण अधिकार असलेले किंवा केवळ कार्यक्रम व्यवस्थापनासाठी व्यवस्थापक (Manager) खाती तयार व नियंत्रित करू शकतात.
+              </p>
+            </div>
+            <button class="btn btn-primary" onclick="openAddUserModal()">
+              <i class="bi bi-person-plus-fill me-1"></i> <span data-admin-i18n="btnCreateUser">नवीन खाते तयार करा</span>
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th data-admin-i18n="thUser">वापरकर्ता नाव (Username)</th>
+                  <th data-admin-i18n="thName">नाव (Full Name)</th>
+                  <th data-admin-i18n="thEmail">ईमेल</th>
+                  <th data-admin-i18n="thRole">भूमिका (Role)</th>
+                  <th data-admin-i18n="thStatus">स्थिती (Status)</th>
+                  <th style="width: 140px; text-align: right;" data-admin-i18n="thActions">क्रिया (Actions)</th>
+                </tr>
+              </thead>
+              <tbody id="usersTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 4: GALLERY MANAGEMENT (Photos by Type)
+             ========================================== -->
+        <div id="tabContentGallery" class="admin-content-card d-none">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h3 class="h4 fw-bold text-dark mb-1" data-admin-i18n="galleryManageHeading">छायाचित्रे व्यवस्थापन (Gallery Photos by Type)</h3>
+              <p class="text-muted small mb-0" data-admin-i18n="galleryManageSub">
+                छायाचित्रे त्यांच्या वर्गानुसार (उदा. वृद्धाश्रम इमारत, परिसर, सुविधा, भोजन, बालगृह उपक्रम, गोशाळा व क्षणचित्रे) जोडा, पहा व हटवा.
+              </p>
+            </div>
+            <button class="btn btn-success" onclick="openAddGalleryModal()">
+              <i class="bi bi-plus-circle me-1"></i> <span data-admin-i18n="btnAddGalleryPhoto">नवीन छायाचित्र जोडा</span>
+            </button>
+          </div>
+
+          <!-- Type Filters -->
+          <div class="d-flex flex-wrap gap-2 mb-4 align-items-center">
+            <span class="text-muted small fw-bold me-1"><i class="bi bi-funnel me-1"></i>प्रकारानुसार फिल्टर (Filter by Type):</span>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill active admin-gal-filter-btn" data-filter="all" onclick="filterAdminGallery('all', this)">सर्व (All)</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill admin-gal-filter-btn" data-filter="वृद्धाश्रम" onclick="filterAdminGallery('वृद्धाश्रम', this)">वृद्धाश्रम (Ashram)</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill admin-gal-filter-btn" data-filter="परिसर" onclick="filterAdminGallery('परिसर', this)">परिसर (Campus)</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill admin-gal-filter-btn" data-filter="सुविधा" onclick="filterAdminGallery('सुविधा', this)">सुविधा (Facilities)</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill admin-gal-filter-btn" data-filter="भोजन" onclick="filterAdminGallery('भोजन', this)">भोजन (Dining)</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill admin-gal-filter-btn" data-filter="उपक्रम" onclick="filterAdminGallery('उपक्रम', this)">उपक्रम (Initiatives)</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill admin-gal-filter-btn" data-filter="क्षणचित्रे" onclick="filterAdminGallery('क्षणचित्रे', this)">क्षणचित्रे / गोशाळा (Moments)</button>
+          </div>
+
+          <!-- Gallery Photos Grid -->
+          <div class="row g-3" id="adminGalleryGrid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TAB 5: DONATION / SUPPORT REQUESTS
+             ========================================== -->
+        <div id="tabContentDonations" class="admin-content-card d-none">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h3 class="h4 fw-bold text-dark mb-1" data-admin-i18n="donationsManageHeading">मदत व देणगी विनंत्या (Donations & Support Requests)</h3>
+              <p class="text-muted small mb-0" data-admin-i18n="donationsManageSub">
+                नागरिकांनी देऊ केलेल्या प्रत्यक्ष उपयुक्त वस्तू (अन्न, कपडे, किराणा, औषधे इ.) दान नोंदी. प्रतिनिधीने संपर्क साधून स्थिती अद्यतनित करावी.
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-sm btn-outline-secondary" onclick="loadDonations()">
+                <i class="bi bi-arrow-clockwise me-1"></i> <span data-admin-i18n="btnRefresh">रिफ्रेश (Refresh)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Status Filters & Search Bar -->
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 p-3 bg-light rounded-3">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Status filter">
+              <button type="button" class="btn btn-outline-success active" id="donFilterBtnAll" onclick="filterDonationsByStatus('ALL')">सर्व (All)</button>
+              <button type="button" class="btn btn-outline-warning" id="donFilterBtnPending" onclick="filterDonationsByStatus('PENDING')">प्रलंबित (Pending)</button>
+              <button type="button" class="btn btn-outline-info" id="donFilterBtnContacted" onclick="filterDonationsByStatus('CONTACTED')">संपर्क केला (Contacted)</button>
+              <button type="button" class="btn btn-outline-primary" id="donFilterBtnCompleted" onclick="filterDonationsByStatus('COMPLETED')">स्वीकृत / पूर्ण (Completed)</button>
+            </div>
+            <div class="input-group input-group-sm" style="max-width: 300px;">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" id="donSearchInput" placeholder="नाव, फोन किंवा वस्तू शोधा..." oninput="handleDonationSearch(this.value)" />
+            </div>
+          </div>
+
+          <!-- Empty State -->
+          <div id="donationsEmptyState" class="text-center py-5 border rounded-3 bg-light d-none">
+            <div class="text-muted mb-3 fs-1"><i class="bi bi-inbox"></i></div>
+            <h4 class="h5 fw-bold text-dark mb-1" data-admin-i18n="noDonationsAdmin">सध्या कोणत्याही देणगी विनंत्या नाहीत.</h4>
+            <p class="text-muted small mb-0">नागरिकांनी मुख्य संकेतस्थळावरून मदतीची माहिती पाठवल्यावर येथे त्वरित दिसेल.</p>
+          </div>
+
+          <!-- Table Wrap -->
+          <div class="table-responsive" id="donationsTableWrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="min-width: 190px;" data-admin-i18n="thDonor">अर्जदार व संपर्क (Donor)</th>
+                  <th style="min-width: 130px;" data-admin-i18n="thCategory">वर्ग (Category)</th>
+                  <th style="min-width: 220px;" data-admin-i18n="thDonationItems">देऊ इच्छित वस्तू (Items)</th>
+                  <th style="min-width: 170px;" data-admin-i18n="thMessage">अतिरिक्त माहिती (Note)</th>
+                  <th style="min-width: 140px;" data-admin-i18n="thSubmittedAt">दिनांक व वेळ (Date)</th>
+                  <th style="min-width: 150px;" data-admin-i18n="thStatus">स्थिती (Status)</th>
+                  <th style="width: 80px; text-align: right;" data-admin-i18n="thActions">क्रिया</th>
+                </tr>
+              </thead>
+              <tbody id="donationsTableBody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ==============================================================
+         MODAL: ADD / EDIT UPCOMING EVENT (BILINGUAL)
+         ============================================================== -->
+    <div class="modal fade" id="modalEvent" tabindex="-1" aria-labelledby="modalEventTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title fw-bold" id="modalEventTitle">
+              <i class="bi bi-calendar-event me-2"></i> <span id="modalEventHeadingText">नवीन कार्यक्रम जोडा</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="formEvent" onsubmit="handleSaveEvent(event)">
+            <input type="hidden" id="eventEditId" value="" />
+            <div class="modal-body">
+              
+              <!-- Bilingual Title -->
+              <div class="bilingual-field-group">
+                <div class="fw-bold mb-2 text-dark">
+                  <i class="bi bi-fonts me-1"></i> <span data-admin-i18n="fldTitleHeading">कार्यक्रमाचे नाव (Event Title)</span> <span class="badge-req">*</span>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">
+                      <span class="lang-indicator lang-indicator-mr">मराठी</span> मराठी नाव
+                    </label>
+                    <input type="text" class="form-control" id="eventTitleMr" placeholder="उदा. मोफत आरोग्य व नेत्र तपासणी शिबिर" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">
+                      <span class="lang-indicator lang-indicator-en">English</span> English Title
+                    </label>
+                    <input type="text" class="form-control" id="eventTitleEn" placeholder="e.g. Free Health & Eye Checkup Camp" required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Date & Time -->
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="eventDate" class="form-label fw-bold">
+                    <i class="bi bi-calendar-date me-1"></i> <span data-admin-i18n="fldDate">दिनांक (Date)</span>
+                  </label>
+                  <input type="date" class="form-control" id="eventDate" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="eventTime" class="form-label fw-bold">
+                    <i class="bi bi-clock me-1"></i> <span data-admin-i18n="fldTime">वेळ (Time)</span>
+                  </label>
+                  <input type="text" class="form-control" id="eventTime" placeholder="उदा. सकाळी १०:०० वाजता / 10:00 AM" />
+                </div>
+              </div>
+
+              <!-- Bilingual Location -->
+              <div class="bilingual-field-group">
+                <div class="fw-bold mb-2 text-dark">
+                  <i class="bi bi-geo-alt-fill text-danger me-1"></i> <span data-admin-i18n="fldLocationHeading">स्थान / स्थळ (Event Location)</span>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">
+                      <span class="lang-indicator lang-indicator-mr">मराठी</span> स्थळ (मराठी)
+                    </label>
+                    <input type="text" class="form-control" id="eventLocationMr" value="थोरल्या माँसाहेब जिजाऊ सेवा संस्था, सामनगाव, नाशिक" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">
+                      <span class="lang-indicator lang-indicator-en">English</span> Location (English)
+                    </label>
+                    <input type="text" class="form-control" id="eventLocationEn" value="Thoralya Mansaheb Jijau Seva Sanstha, Samangaon, Nashik" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bilingual Description -->
+              <div class="bilingual-field-group">
+                <div class="fw-bold mb-2 text-dark">
+                  <i class="bi bi-card-text me-1"></i> <span data-admin-i18n="fldDescHeading">सविस्तर वर्णन (Description)</span>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">
+                      <span class="lang-indicator lang-indicator-mr">मराठी</span> वर्णन (मराठी)
+                    </label>
+                    <textarea class="form-control" id="eventDescMr" rows="3" placeholder="कार्यक्रमाची उद्दिष्टे व तपशील..."></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">
+                      <span class="lang-indicator lang-indicator-en">English</span> Description (English)
+                    </label>
+                    <textarea class="form-control" id="eventDescEn" rows="3" placeholder="Details and objectives of the event..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Event Image Upload -->
+              <div class="mb-3">
+                <label class="form-label fw-bold">
+                  <i class="bi bi-image me-1"></i> <span data-admin-i18n="fldImage">कार्यक्रमाचे छायाचित्र (Event Image - पर्यायी)</span>
+                </label>
+                <div class="d-flex align-items-center gap-3">
+                  <input type="file" class="form-control" id="eventImageFileInput" accept="image/*" onchange="handleEventImageFileSelect(event)" />
+                  <button type="button" class="btn btn-outline-danger btn-sm d-none" id="btnRemoveEventImg" onclick="removeEventImage()">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+                <input type="hidden" id="eventImageUrl" />
+                <div id="eventImgPreviewWrap" class="mt-2 d-none">
+                  <img id="eventImgPreview" src="" alt="Preview" style="max-height: 140px; border-radius: 8px; border: 1px solid #E5E7EB;" />
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer bg-light">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-admin-i18n="btnCancel">रद्द करा</button>
+              <button type="submit" class="btn btn-success fw-bold px-4" id="btnSaveEvent">
+                <i class="bi bi-check2-circle me-1"></i> <span data-admin-i18n="btnSaveEvent">कार्यक्रम जतन करा</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         MODAL: UPLOAD BOARD MEMBER PHOTO (SUPER ADMIN ONLY)
+         ============================================================== -->
+    <div class="modal fade" id="modalBoardPhoto" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title fw-bold" id="boardModalTitle">संचालक छायाचित्र बदला</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="formBoardPhoto" onsubmit="handleSaveBoardPhoto(event)">
+            <input type="hidden" id="boardMemberId" />
+            <div class="modal-body text-center">
+              <div class="mb-3">
+                <img id="boardPhotoCurrentPreview" src="/images/board-member-placeholder.jpg" alt="Preview" style="width: 140px; height: 168px; object-fit: cover; border-radius: 12px; border: 2px solid #D1D5DB;" />
+              </div>
+              <h5 class="fw-bold mb-1" id="boardMemberModalName">नाव</h5>
+              <p class="text-muted small mb-3" id="boardMemberModalRole">पद व शहर</p>
+
+              <div class="text-start mb-3">
+                <label class="form-label fw-bold" data-admin-i18n="lblSelectPhoto">नवीन छायाचित्र निवडा (Select Photo)</label>
+                <input type="file" class="form-control" id="boardPhotoFileInput" accept="image/*" required onchange="handleBoardPhotoFileSelect(event)" />
+                <small class="text-muted" data-admin-i18n="photoHint">JPG, PNG, WebP सपोर्टेड. फोटो आपोआप योग्य गुणोत्तरात सेट होईल.</small>
+              </div>
+
+              <input type="hidden" id="boardPhotoDataUrl" />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-admin-i18n="btnCancel">रद्द करा</button>
+              <button type="submit" class="btn btn-success fw-bold" id="btnSaveBoardPhoto" data-admin-i18n="btnUploadPhoto">छायाचित्र जतन करा</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         MODAL: CREATE MANAGER / ADMIN USER (SUPER ADMIN ONLY)
+         ============================================================== -->
+    <div class="modal fade" id="modalUser" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title fw-bold" data-admin-i18n="modalCreateUserTitle">नवीन व्यवस्थापक / अ‍ॅडमिन खाते तयार करा</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="formUser" onsubmit="handleCreateUser(event)">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="newUsername" class="form-label fw-bold" data-admin-i18n="lblNewUsername">वापरकर्ता नाव (Username) <span class="badge-req">*</span></label>
+                <input type="text" class="form-control" id="newUsername" required placeholder="उदा. manager2" />
+              </div>
+              <div class="mb-3">
+                <label for="newFullName" class="form-label fw-bold" data-admin-i18n="lblNewFullName">पूर्ण नाव (Full Name) <span class="badge-req">*</span></label>
+                <input type="text" class="form-control" id="newFullName" required placeholder="उदा. श्री. संतोष पाटील" />
+              </div>
+              <div class="mb-3">
+                <label for="newEmail" class="form-label fw-bold" data-admin-i18n="lblNewEmail">ईमेल (Email)</label>
+                <input type="email" class="form-control" id="newEmail" placeholder="उदा. manager@jijauseva.org" />
+              </div>
+              <div class="mb-3">
+                <label for="newPassword" class="form-label fw-bold" data-admin-i18n="lblNewPassword">पासवर्ड (Password) <span class="badge-req">*</span></label>
+                <input type="password" class="form-control" id="newPassword" required minlength="6" placeholder="किमान ६ अक्षरी पासवर्ड" />
+              </div>
+              <div class="mb-3">
+                <label for="newRole" class="form-label fw-bold" data-admin-i18n="lblNewRole">भूमिका व अधिकार (Role & Permissions) <span class="badge-req">*</span></label>
+                <select class="form-select" id="newRole" required>
+                  <option value="MANAGER" selected>व्यवस्थापक (Manager) — केवळ आगामी कार्यक्रम व्यवस्थापन</option>
+                  <option value="SUPER_ADMIN">सुपर अ‍ॅडमिन (Super Admin) — संपूर्ण नियंत्रण अधिकार</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-admin-i18n="btnCancel">रद्द करा</button>
+              <button type="submit" class="btn btn-primary fw-bold" id="btnSubmitUser" data-admin-i18n="btnSubmitCreateUser">खाते तयार करा</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================================
+         MODAL: ADD GALLERY PHOTO BY TYPE
+         ============================================================== -->
+    <div class="modal fade" id="modalGalleryPhoto" tabindex="-1" aria-labelledby="modalGalleryPhotoTitle" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title fw-bold" id="modalGalleryPhotoTitle">
+              <i class="bi bi-camera-fill me-2"></i> <span data-admin-i18n="modalAddPhotoTitle">नवीन छायाचित्र जोडा (Add Photo by Type)</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="formGalleryPhoto" onsubmit="handleSaveGalleryPhoto(event)">
+            <div class="modal-body">
+              
+              <!-- Category / Type Selection -->
+              <div class="mb-3">
+                <label for="galPhotoCategory" class="form-label fw-bold">
+                  <i class="bi bi-tag-fill text-success me-1"></i> छायाचित्राचा प्रकार / वर्ग (Category / Type) <span class="badge-req">*</span>
+                </label>
+                <select class="form-select" id="galPhotoCategory" required>
+                  <option value="वृद्धाश्रम" selected>वृद्धाश्रम इमारत (Old Age Home Building)</option>
+                  <option value="परिसर">परिसर व निसर्ग (Campus & Surroundings)</option>
+                  <option value="सुविधा">निवासी सुविधा व खोल्या (Facilities & Living Rooms)</option>
+                  <option value="भोजन">भोजन व्यवस्था व स्वयंपाकघर (Dining & Kitchen)</option>
+                  <option value="उपक्रम">बालगृह व सेवा उपक्रम (Children Balgruha & Initiatives)</option>
+                  <option value="क्षणचित्रे">गोशाळा, गोसेवा व क्षणचित्रे (Goshala & Moments)</option>
+                </select>
+              </div>
+
+              <!-- Marathi Caption -->
+              <div class="mb-3">
+                <label for="galPhotoTitleMr" class="form-label fw-bold">
+                  छायाचित्राचे नाव / कॅप्शन (मराठी) <span class="badge-req">*</span>
+                </label>
+                <input type="text" class="form-control" id="galPhotoTitleMr" required placeholder="उदा. आश्रम मुख्य इमारत किंवा ज्येष्ठ नागरिक भोजन" />
+              </div>
+
+              <!-- English Caption -->
+              <div class="mb-3">
+                <label for="galPhotoTitleEn" class="form-label fw-bold">
+                  Photo Caption (English)
+                </label>
+                <input type="text" class="form-control" id="galPhotoTitleEn" placeholder="e.g., Ashram Building or Dining Facility" />
+              </div>
+
+              <!-- Image File Upload / URL -->
+              <div class="mb-3">
+                <label class="form-label fw-bold">
+                  <i class="bi bi-image text-success me-1"></i> छायाचित्र निवडा (Choose Image) <span class="badge-req">*</span>
+                </label>
+                <input type="file" class="form-control mb-2" id="galPhotoFileInput" accept="image/*" onchange="handleGalleryPhotoFileSelect(event)" />
+                <small class="text-muted d-block mb-2">किंवा थेट छायाचित्र URL द्या (Or enter image URL):</small>
+                <input type="text" class="form-control" id="galPhotoUrl" placeholder="उदा. /images/ashram-building.jpg किंवा /uploads/photo.jpg" oninput="updateGalleryPreviewFromUrl(this.value)" />
+              </div>
+
+              <!-- Live Preview -->
+              <div class="mb-2 text-center p-2 bg-light rounded border d-none" id="galPreviewWrap">
+                <small class="text-muted d-block mb-1">पूर्वावलोकन (Preview):</small>
+                <img id="galPhotoPreview" src="" alt="Preview" style="max-height: 180px; max-width: 100%; object-fit: contain; border-radius: 6px;" />
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-admin-i18n="btnCancel">रद्द करा</button>
+              <button type="submit" class="btn btn-success fw-bold" id="btnSubmitGalPhoto">
+                <i class="bi bi-check-circle me-1"></i> <span data-admin-i18n="btnSavePhoto">छायाचित्र जतन करा</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Admin Portal Script -->
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

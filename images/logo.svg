@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332" />
+      <stop offset="100%" stop-color="#0E241B" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D06F" />
+      <stop offset="50%" stop-color="#D4A338" />
+      <stop offset="100%" stop-color="#AA7B18" />
+    </linearGradient>
+    <linearGradient id="saffronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F43" />
+      <stop offset="100%" stop-color="#EE5A24" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Protective Circle -->
+  <circle cx="120" cy="120" r="114" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="5" />
+  <circle cx="120" cy="120" r="106" fill="none" stroke="#FAF7F2" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" />
+
+  <!-- Radiance / Aura Rays -->
+  <g stroke="url(#goldGrad)" stroke-width="2" opacity="0.35">
+    <line x1="120" y1="20" x2="120" y2="32" />
+    <line x1="120" y1="208" x2="120" y2="220" />
+    <line x1="20" y1="120" x2="32" y2="120" />
+    <line x1="208" y1="120" x2="220" y2="120" />
+    <line x1="49" y1="49" x2="58" y2="58" />
+    <line x1="191" y1="49" x2="182" y2="58" />
+    <line x1="49" y1="191" x2="58" y2="182" />
+    <line x1="191" y1="191" x2="182" y2="182" />
+  </g>
+
+  <!-- Supportive Caring Hands Motif (Base) -->
+  <path d="M68 165 C68 185, 95 195, 120 195 C145 195, 172 185, 172 165 C165 155, 140 162, 120 162 C100 162, 75 155, 68 165 Z" fill="url(#goldGrad)" opacity="0.9" />
+
+  <!-- Jijau Rajmudra / Kalash Inspiring Arch -->
+  <path d="M120 48 C145 70, 168 95, 168 128 C168 152, 148 168, 120 168 C92 168, 72 152, 72 128 C72 95, 95 70, 120 48 Z" fill="#2D6A4F" stroke="url(#goldGrad)" stroke-width="3" />
+
+  <!-- Diya / Flame of Compassion & Warmth -->
+  <path d="M120 72 C128 85, 136 98, 136 112 C136 126, 128 135, 120 135 C112 135, 104 126, 104 112 C104 98, 112 85, 120 72 Z" fill="url(#saffronGrad)" />
+  <ellipse cx="120" cy="116" rx="6" ry="10" fill="#FFF4D2" />
+
+  <!-- Sanskrit/Devanagari Symbolic Swastik/Om/Emblem Center Base -->
+  <circle cx="120" cy="148" r="4" fill="url(#goldGrad)" />
+  <circle cx="108" cy="148" r="2.5" fill="url(#goldGrad)" opacity="0.8" />
+  <circle cx="132" cy="148" r="2.5" fill="url(#goldGrad)" opacity="0.8" />
+
+  <!-- Small Stars of Service (Old Age Care, Balgruha, Goshala) -->
+  <path d="M86 100 L88 106 L94 106 L89 110 L91 116 L86 112 L81 116 L83 110 L78 106 L84 106 Z" fill="url(#goldGrad)" />
+  <path d="M154 100 L156 106 L162 106 L157 110 L159 116 L154 112 L149 116 L151 110 L146 106 L152 106 Z" fill="url(#goldGrad)" />
+
+  <!-- Top Crown / Kalash Finial -->
+  <path d="M120 38 L124 46 L116 46 Z" fill="url(#goldGrad)" />
+</svg>
